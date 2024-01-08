@@ -33,9 +33,9 @@ npm i -D postcss postcss-loader postcss-preset-env
 
 ---
 
-※ 공식문서 외 참고 사이트
-https://velog.io/@jungsangu/Webpack-Babel로-React-Typescript-개발환경-구축하기
-https://typescript-kr.github.io/pages/tutorials/react-&-webpack.html
-https://velog.io/@party3205/React-Cra-없이-리액트-직접-구현하며-웹팩-바벨-다루기
-https://velog.io/@han1368/ReactTypescriptEsLintairbnbPrettier-개발환경-설정-방법
-https://blog.shiren.dev/2020-12-01/
+※ 공식문서 외 참고 사이트  
+https://velog.io/@jungsangu/Webpack-Babel로-React-Typescript-개발환경-구축하기  
+https://typescript-kr.github.io/pages/tutorials/react-&-webpack.html  
+https://velog.io/@party3205/React-Cra-없이-리액트-직접-구현하며-웹팩-바벨-다루기  
+https://velog.io/@han1368/ReactTypescriptEsLintairbnbPrettier-개발환경-설정-방법  
+https://blog.shiren.dev/2020-12-01/  
