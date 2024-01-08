@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "strict": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "allowJs": false,
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "isolatedModules": true
+  },
+  "include": ["src"]
+}
