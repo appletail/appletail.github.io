@@ -4,13 +4,10 @@
   "description": "Portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev -- --open",
     "dev": "cross-env NODE_ENV=development webpack serve",
+    "start": "npm run dev -- --open",
     "bundle": "cross-env NODE_ENV=development webpack",
-    "build": "cross-env NODE_ENV=production webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint \"./src/**/*.{ts,tsx,js,jsx}\"",
-    "lint:fix": "eslint --fix \"./src/**/*.{ts,tsx,js,jsx}\""
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "keywords": [],
   "author": "appletail",

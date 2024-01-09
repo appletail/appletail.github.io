@@ -18,10 +18,10 @@ $ npm i babel-loader css-loader style-loader mini-css-extract-plugin
 $ npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript
 $ npm i --save-dev html-webpack-plugin
 $ npm i --save-dev clean-webpack-plugin
-$ npm install http-proxy-middleware --save
+$ npm i http-proxy-middleware --save
 
-npm install --save-dev @types/react @types/react-dom
-npm install --save-dev typescript ts-loader source-map-loader
+npm i --save-dev @types/react @types/react-dom
+npm i --save-dev typescript ts-loader source-map-loader
 
 npm i react-router-dom
 
@@ -31,11 +31,23 @@ npm i eslint-config-prettier
 npm i -D postcss postcss-loader postcss-preset-env
 ```
 
+# 02 배포 방식
+
+deploy시 자동으로 build가 되도록 한다.
+
 ---
 
-※ 공식문서 외 참고 사이트  
+### ※ 공식문서 외 참고 사이트
+
+#### 환경구축
+
 https://velog.io/@jungsangu/Webpack-Babel로-React-Typescript-개발환경-구축하기  
 https://typescript-kr.github.io/pages/tutorials/react-&-webpack.html  
 https://velog.io/@party3205/React-Cra-없이-리액트-직접-구현하며-웹팩-바벨-다루기  
 https://velog.io/@han1368/ReactTypescriptEsLintairbnbPrettier-개발환경-설정-방법  
-https://blog.shiren.dev/2020-12-01/  
+https://blog.shiren.dev/2020-12-01/
+
+#### 배포
+
+https://velog.io/@kdeun1/Github-Actions로-gh-pages-자동-배포하기  
+https://torbjorn.tistory.com/807
