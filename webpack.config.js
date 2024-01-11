@@ -30,7 +30,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/' 
+    publicPath: isDevMode ? '/' : '/ShimJaeWon'
   },
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
