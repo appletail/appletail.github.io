@@ -29,8 +29,7 @@ module.exports = {
     main: './src/main.tsx',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: isDevMode ? '/' : '/ShimJaeWon'
+    path: path.resolve(__dirname, 'dist')
   },
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
