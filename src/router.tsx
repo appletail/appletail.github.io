@@ -5,7 +5,7 @@ import Test2 from '@/components/Test2';
 const router = createBrowserRouter(
   [
     {
-      path: '/',
+      path: '',
       element: <Test />,
     },
     {
