@@ -30,6 +30,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/' 
   },
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
@@ -71,6 +72,8 @@ module.exports = {
   },
   devServer: {
     hot: true,
+    port: 3000,
+    historyApiFallback: true,
   },
   plugins,
 };
