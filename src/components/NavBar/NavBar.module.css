@@ -1,0 +1,30 @@
+.gnb {
+  position: fixed;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.header-content-before-scroll {
+  color: white;
+  background-color: transparent;
+  transition: 0.2s ease-in;
+}
+
+.header-content-after-scroll {
+  color: black;
+  background-color: white;
+  transition: 0.2s ease-in;
+}
+
+.nav-layout {
+  display: flex;
+  gap: 1rem;
+}
