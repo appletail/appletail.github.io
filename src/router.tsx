@@ -1,15 +1,16 @@
 import { createHashRouter } from 'react-router-dom';
-import Test from '@/components/Test';
-import Test2 from '@/components/Test2';
+import Home from './pages/Home';
+import RootLayout from './layouts/RootLayout';
 
 const router = createHashRouter([
   {
-    path: '',
-    element: <Test />,
-  },
-  {
-    path: '/test2',
-    element: <Test2 />,
+    element: <RootLayout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+    ],
   },
 ]);
 
