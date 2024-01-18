@@ -4,10 +4,11 @@ import RootLayout from './layouts/RootLayout';
 
 const router = createHashRouter([
   {
+    path: '/',
     element: <RootLayout />,
     children: [
       {
-        path: '/',
+        path: '',
         element: <Home />,
       },
     ],

@@ -1,5 +1,6 @@
 .gnb {
   position: fixed;
+  z-index: 10;
   width: 100%;
 }
 
@@ -8,17 +9,17 @@
   justify-content: space-between;
   align-items: center;
   height: 4.5rem;
-  padding: 0 2rem;
+  max-width: 71.25rem;
   margin: 0 auto;
 }
 
-.header-content-before-scroll {
+.gnb-before-scroll {
   color: white;
   background-color: transparent;
   transition: 0.2s ease-in;
 }
 
-.header-content-after-scroll {
+.gnb-after-scroll {
   color: black;
   background-color: white;
   transition: 0.2s ease-in;

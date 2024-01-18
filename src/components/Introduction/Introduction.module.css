@@ -1,0 +1,40 @@
+.introduction-container {
+  background-color: black;
+  height: 500vh;
+  color: white;
+}
+.sticky {
+  position: sticky;
+  height: 100vh;
+  top: 0;
+  width: 100%;
+}
+.text-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.text1 {
+  position: absolute;
+  font-size: 2.5rem;
+  top: 15rem;
+  transition: 0.2s ease-in;
+}
+.text2 {
+  position: absolute;
+  font-size: 2.5rem;
+  top: 18rem;
+  transition: 0.2s ease-in;
+}
+.text3 {
+  position: absolute;
+  font-size: 5rem;
+  top: 22rem;
+}
+.text4 {
+  position: absolute;
+  font-size: 5rem;
+  top: 26rem;
+}
