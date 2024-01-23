@@ -17,7 +17,7 @@ function useComponentObserver(
 
     const dom = ref.current;
     if (dom) observer.observe(dom)
-    else console.error('ref is not valid');
+    else throw new Error('ref is not valid');
 
     return () => {
       if (dom) observer.unobserve(dom);
