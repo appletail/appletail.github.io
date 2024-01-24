@@ -1,36 +1,50 @@
-import { MutableRefObject } from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import styles from './NavBar.module.css';
-import navMenuNames from '@/constants/navbar';
-import useComponentObserver from '@/hooks/useComponentObserver';
+import navMenus from '@/constants/navbar';
+import pathName from '@/route/pathName';
 
-function NavBar({
-  introductionRef,
-}: {
-  introductionRef: MutableRefObject<HTMLElement | null>;
-}) {
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.05,
-  };
-
-  const introductionIntersect = useComponentObserver(introductionRef, options);
+function NavBar() {
+  const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <header
       className={`${styles.gnb} ${
-        introductionIntersect
-          ? styles['gnb-before-scroll']
-          : styles['gnb-after-scroll']
+        location.pathname === pathName.home
+          ? styles['gnb-home']
+          : styles['gnb-default']
       } `}
     >
       <div className={styles['header-content']}>
-        <div>logo</div>
-        <ul className={styles['nav-layout']}>
-          {navMenuNames.map((navMenuName) => (
-            <li key={navMenuName.id}>{navMenuName.menuName}</li>
+        <div>
+          <button
+            type="button"
+            className={styles['nav-arrow']}
+            onClick={() => navigate(-1)}
+          >
+            ←
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate(1)}
+            className={styles['nav-arrow']}
+          >
+            →
+          </button>
+        </div>
+        <div className={styles['nav-layout']}>
+          {navMenus.map((navMenu) => (
+            <NavLink
+              to={navMenu.to}
+              key={navMenu.id}
+              className={({ isActive }) =>
+                isActive ? styles['nav-item-active'] : styles['nav-item']
+              }
+            >
+              {navMenu.name}
+            </NavLink>
           ))}
-        </ul>
+        </div>
       </div>
     </header>
   );

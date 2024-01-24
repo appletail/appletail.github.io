@@ -1,16 +1,16 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const isDevMode = process.env.NODE_ENV.includes('dev')
+const isDevMode = process.env.NODE_ENV.includes('dev');
 
 const plugins = [
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
     template: './index.html',
   }),
-]
+];
 
 if (!isDevMode) {
   plugins.push(
@@ -19,7 +19,7 @@ if (!isDevMode) {
       filename: 'assets/css/[name].[contenthash:8].css',
       chunkFilename: 'assets/css/[name].[contenthash:8].chunk.css',
     })
-  )
+  );
 }
 
 module.exports = {
@@ -29,7 +29,7 @@ module.exports = {
     main: './src/main.tsx',
   },
   output: {
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
@@ -48,10 +48,11 @@ module.exports = {
       {
         test: /\.css$/i,
         exclude: /\.module\.css$/i,
-        use: [isDevMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-        { loader: 'css-loader', options: { importLoaders: 1, url: false } },
-        'postcss-loader',
-      ]
+        use: [
+          isDevMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          'postcss-loader',
+        ],
       },
       {
         test: /\.module\.css$/i,
@@ -62,39 +63,18 @@ module.exports = {
             options: {
               modules: true,
               importLoaders: 1,
-              url: false
             },
           },
           'postcss-loader',
         ],
       },
       {
-        // write image files under 10k to inline or copy image files over 10k
         test: /\.(jpg|jpeg|gif|png|svg|ico)?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              fallback: 'file-loader',
-              name: 'assets/images/[name].[ext]',
-            },
-          },
-        ],
+        type: 'asset',
       },
       {
-        // write files under 10k to inline or copy files over 10k
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              fallback: 'file-loader',
-              name: 'assets/fonts/[name].[ext]',
-            },
-          },
-        ],
+        type: 'asset',
       },
     ],
   },

@@ -1,12 +1,12 @@
 .introduction-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.827), rgba(0, 0, 0, 0.8)),
-    url('/assets/images/image1.jpg');
+    url('/src/assets/images/image1.jpg');
   background-color: black;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
-  height: 480vh;
+  height: 420vh;
   color: white;
 }
 .sticky {
@@ -23,18 +23,18 @@
   height: 100%;
 }
 .text-fade-in {
-  position: absolute;
+  position: fixed;
   opacity: 1;
   animation: fadein 0.5s;
 }
 .text-fade-out {
   position: fixed;
-  opacity: 0;
+  opacity: 0.3;
   animation: fadeout 0.3s;
 }
 @keyframes fadein {
   from {
-    opacity: 0;
+    opacity: 0.3;
   }
   to {
     opacity: 1;
@@ -45,6 +45,6 @@
     opacity: 1;
   }
   to {
-    opacity: 0;
+    opacity: 0.3;
   }
 }
