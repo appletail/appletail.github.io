@@ -1,6 +1,5 @@
 build
 coverage
 dist
-webpack.config.js
 babel.config.js
 .eslintrc.js

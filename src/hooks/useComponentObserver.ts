@@ -2,13 +2,14 @@ import { MutableRefObject, useEffect, useState } from 'react';
 
 function useComponentObserver(
   ref: MutableRefObject<HTMLElement | null>,
-  options?: IntersectionObserverInit | undefined) {
+  options?: IntersectionObserverInit | undefined
+) {
   const [isIntersect, setIsIntersect] = useState(false);
 
   useEffect(() => {
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) setIsIntersect(true)
+        if (entry.isIntersecting) setIsIntersect(true);
         else setIsIntersect(false);
       });
     };
@@ -16,7 +17,7 @@ function useComponentObserver(
     const observer = new IntersectionObserver(callback, options);
 
     const dom = ref.current;
-    if (dom) observer.observe(dom)
+    if (dom) observer.observe(dom);
     else throw new Error('ref is not valid');
 
     return () => {
@@ -25,6 +26,6 @@ function useComponentObserver(
   }, []);
 
   return isIntersect;
-};
+}
 
 export default useComponentObserver;

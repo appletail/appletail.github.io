@@ -6,26 +6,67 @@
 
 .header-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  height: 4.5rem;
+  padding: 1rem 0;
   max-width: 71.25rem;
   margin: 0 auto;
+  gap: 1.3rem;
 }
 
-.gnb-before-scroll {
-  color: white;
+.gnb-home {
   background-color: transparent;
-  transition: 0.2s ease-in;
+  transition: ease 0.3s;
 }
 
-.gnb-after-scroll {
-  color: black;
-  background-color: white;
-  transition: 0.2s ease-in;
+.gnb-default {
+  background-color: #171d25;
+  transition: ease 0.3s;
+}
+
+.nav-arrow-disable {
+  color: #3d4450;
+}
+.nav-arrow {
+  color: #67707b;
+}
+.nav-arrow:hover {
+  cursor: pointer;
+  color: #dcdedf;
 }
 
 .nav-layout {
+  font-size: 1.5rem;
   display: flex;
-  gap: 1rem;
+  gap: 2.8rem;
+}
+.nav-item {
+  color: #dcdedf;
+  cursor: pointer;
+}
+.nav-item:hover {
+  color: #ffffff;
+}
+.nav-item-active {
+  position: relative;
+  color: #1a9fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.3rem;
+    height: 100%;
+    width: 100%;
+    border-bottom: 0.15rem solid;
+    animation: nav-active 0.1s;
+  }
+}
+
+@keyframes nav-active {
+  0% {
+    transform: scale3d(0, 1, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
 }

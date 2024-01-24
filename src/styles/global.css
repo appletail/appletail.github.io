@@ -41,6 +41,10 @@ input,
 select {
   margin: 0;
 }
+button {
+  border: 0;
+  background-color: transparent;
+}
 html {
   box-sizing: border-box;
 }
@@ -64,4 +68,7 @@ table {
 td,
 th {
   padding: 0;
+}
+a {
+  text-decoration-line: none;
 }
