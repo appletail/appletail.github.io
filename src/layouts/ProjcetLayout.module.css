@@ -1,0 +1,5 @@
+.outlet-container {
+  display: flex;
+  height: 100%;
+  padding-left: 18rem;
+}

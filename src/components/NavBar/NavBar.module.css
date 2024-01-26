@@ -1,5 +1,4 @@
 .gnb {
-  position: fixed;
   z-index: 10;
   width: 100%;
 }
@@ -10,16 +9,19 @@
   align-items: center;
   padding: 1rem 0;
   max-width: 71.25rem;
-  margin: 0 auto;
+  margin: 0 1rem;
   gap: 1.3rem;
 }
 
-.gnb-home {
+.gnb-Introduction {
+  position: fixed;
   background-color: transparent;
   transition: ease 0.3s;
 }
 
 .gnb-default {
+  position: sticky;
+  top: 0;
   background-color: #171d25;
   transition: ease 0.3s;
 }

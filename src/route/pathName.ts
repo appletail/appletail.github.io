@@ -1,6 +1,6 @@
 const pathName = {
-  home: '/',
-  project: '/project/:id',
+  Introduction: '/',
+  project: '/project',
   profile: '/profile',
 };
 

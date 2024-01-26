@@ -1,6 +1,6 @@
 import profileImg from '@/assets/images/image1.jpg';
 
-function AboutMe() {
+function Profile() {
   return (
     <div id="about-me">
       <img src={profileImg} alt="profile" />
@@ -8,4 +8,4 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default Profile;
