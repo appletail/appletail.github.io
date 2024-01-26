@@ -1,7 +1,11 @@
 import { createHashRouter } from 'react-router-dom';
-import Home from '@/pages/Home';
-import RootLayout from '@/layouts/RootLayout';
 import pathName from '@/route/pathName';
+import RootLayout from '@/layouts/RootLayout';
+import Introduction from '@/pages/Introduction/Introduction';
+import ProjectLayout from '@/layouts/ProjectLayout';
+import ProjectList from '@/pages/Project/ProjectList/ProjectList';
+import ProjectDetail from '@/pages/Project/ProjectDetail/ProjectDetail';
+import Profile from '@/pages/Profile/Profile';
 
 const router = createHashRouter([
   {
@@ -9,16 +13,25 @@ const router = createHashRouter([
     element: <RootLayout />,
     children: [
       {
-        path: pathName.home,
-        element: <Home />,
+        path: pathName.Introduction,
+        element: <Introduction />,
       },
       {
-        path: pathName.project,
-        element: <Home />,
+        element: <ProjectLayout />,
+        children: [
+          {
+            path: pathName.project,
+            element: <ProjectList />,
+          },
+          {
+            path: `${pathName.project}/:id`,
+            element: <ProjectDetail />,
+          },
+        ],
       },
       {
         path: pathName.profile,
-        element: <Home />,
+        element: <Profile />,
       },
     ],
   },

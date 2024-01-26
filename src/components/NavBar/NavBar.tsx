@@ -1,17 +1,22 @@
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import styles from './NavBar.module.css';
 import navMenus from '@/constants/navbar';
 import pathName from '@/route/pathName';
 
 function NavBar() {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <header
       className={`${styles.gnb} ${
-        location.pathname === pathName.home
-          ? styles['gnb-home']
+        pathname === pathName.Introduction
+          ? styles['gnb-Introduction']
           : styles['gnb-default']
       } `}
     >
