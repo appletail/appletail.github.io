@@ -1,3 +1,13 @@
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  min-width: 18rem;
+  height: 100%;
+  background-color: #24282f;
+  border-right: 3px solid #17191b;
+}
+
 .all-project {
   display: flex;
   align-items: center;
@@ -9,15 +19,6 @@
 
 .all-project:hover {
   background-color: #323a4b;
-}
-
-.sidebar {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  min-width: 18rem;
-  height: 100%;
-  background-color: #24282f;
 }
 
 .collections-container {

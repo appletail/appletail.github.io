@@ -1,6 +1,9 @@
 .gnb {
+  top: 0;
+  position: fixed;
   z-index: 10;
   width: 100%;
+  background-color: #171d25;
 }
 
 .header-content {
@@ -11,19 +14,6 @@
   max-width: 71.25rem;
   margin: 0 1rem;
   gap: 1.3rem;
-}
-
-.gnb-Introduction {
-  position: fixed;
-  background-color: transparent;
-  transition: ease 0.3s;
-}
-
-.gnb-default {
-  position: sticky;
-  top: 0;
-  background-color: #171d25;
-  transition: ease 0.3s;
 }
 
 .nav-arrow-disable {

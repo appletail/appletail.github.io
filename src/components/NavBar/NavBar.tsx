@@ -2,7 +2,6 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import styles from './NavBar.module.css';
 import navMenus from '@/constants/navbar';
-import pathName from '@/route/pathName';
 
 function NavBar() {
   const { pathname } = useLocation();
@@ -13,13 +12,7 @@ function NavBar() {
   }, [pathname]);
 
   return (
-    <header
-      className={`${styles.gnb} ${
-        pathname === pathName.Introduction
-          ? styles['gnb-Introduction']
-          : styles['gnb-default']
-      } `}
-    >
+    <header className={styles.gnb}>
       <div className={styles['header-content']}>
         <div>
           <button
