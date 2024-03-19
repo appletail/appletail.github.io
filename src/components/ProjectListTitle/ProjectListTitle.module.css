@@ -1,0 +1,19 @@
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #d3d3d3;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+.list-count {
+  color: #a9a9a9;
+}
+
+.line {
+  width: 70vw;
+  height: 2px;
+  border: 0px solid;
+  background: linear-gradient(to right, #4e555f, transparent);
+}

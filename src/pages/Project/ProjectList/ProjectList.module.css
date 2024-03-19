@@ -1,21 +1,7 @@
 .project-list {
   color: #d3d3d3;
-  white-space: nowrap;
 }
 
-.title {
+.card-list {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.list-count {
-  color: #a9a9a9;
-}
-
-.line {
-  width: 100%;
-  height: 2px;
-  border: 0px solid;
-  background: linear-gradient(to right, #4e555f, transparent);
 }
