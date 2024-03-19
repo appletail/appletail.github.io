@@ -5,7 +5,7 @@ import pathName from '@/route/pathName';
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className={styles['card-container']}>
+    <div>
       <Link to={`${pathName.project}/${project.id}`}>
         <img className={styles.card} src={project.cardImg} alt={project.name} />
       </Link>

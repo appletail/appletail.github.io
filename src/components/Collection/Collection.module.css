@@ -15,7 +15,13 @@
   color: #c8e1f8;
 }
 
+.collection-name:hover {
+  background: #3e4e69;
+}
+
 .count {
   margin-left: 0.2rem;
   color: #4f535a;
 }
+
+/* 3E4E69 */

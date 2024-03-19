@@ -1,28 +1,35 @@
-import { useEffect, useState, Fragment } from 'react';
-import styles from '@/pages/Project/ProjectList/ProjectList.module.css';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import projects from '@/constants/project';
-import ProjectListTitle from '@/components/ProjectListTitle/ProjectListTitle';
-import ProjectCard from '@/components/ProjectCard/ProjectCard';
+import ProjectListTemplate from '@/template/ProjectListTemplate';
 
 function ProjectList() {
-  const [projectLength, setProjectLength] = useState(0);
+  const [project, setProject] = useState<Project[]>([]);
+  const [titleName, setTitleName] = useState('전체 프로젝트');
+  const [searchParams] = useSearchParams();
   useEffect(() => {
-    setProjectLength(projects.reduce((acc, el) => acc + el.length, 0));
-  }, []);
+    const sort = searchParams.get('sort')?.toUpperCase();
+    if (sort === 'WEB PROJECT' || sort === 'OTHERS') {
+      setTitleName(sort);
+      setProject(
+        projects.reduce(
+          (acc, projectGroup) =>
+            projectGroup[0].category === sort ? [...acc, ...projectGroup] : acc,
+          []
+        )
+      );
+    } else
+      setProject(
+        projects.reduce((acc, projectGroup) => [...acc, ...projectGroup], [])
+      );
+  }, [searchParams]);
 
   return (
-    <div className={styles['project-list']}>
-      <ProjectListTitle name="전체" count={projectLength} />
-      <div className={styles['card-list']}>
-        {projects.map((collections) => (
-          <Fragment key={collections[0].category}>
-            {collections.map((collection) => (
-              <ProjectCard key={collection.id} project={collection} />
-            ))}
-          </Fragment>
-        ))}
-      </div>
-    </div>
+    <ProjectListTemplate
+      titleName={titleName}
+      collections={project}
+      titleCnt={project.length}
+    />
   );
 }
 
