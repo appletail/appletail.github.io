@@ -7,7 +7,10 @@ function ProjectLayout() {
     <div>
       <SideBar />
       <div className={styles['outlet-container']}>
-        <Outlet />
+        <div className={styles.background} />
+        <div className={styles.projects}>
+          <Outlet />
+        </div>
       </div>
     </div>
   );

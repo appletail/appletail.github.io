@@ -1,0 +1,10 @@
+.project-list {
+  color: #d3d3d3;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  column-gap: 3.5rem;
+}

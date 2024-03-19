@@ -12,10 +12,16 @@ function SideBar() {
       </Link>
       {projects.map((collections) => (
         <div key={collections[0].category}>
-          <Collection
-            name={collections[0].category}
-            count={collections.length}
-          />
+          <Link
+            to={`${
+              pathName.project
+            }?sort=${collections[0].category.toLowerCase()}`}
+          >
+            <Collection
+              name={collections[0].category}
+              count={collections.length}
+            />
+          </Link>
           <div>
             {collections.map((collection) => (
               <NavLink

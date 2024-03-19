@@ -4,3 +4,10 @@ declare module "*.module.css" {
 }
 declare module "*.jpg"
 declare module "*.png"
+
+interface Project {
+  id: string;
+  name: string;
+  cardImg: string;
+  category: string;
+}
