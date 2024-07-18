@@ -25,7 +25,7 @@
   max-height: 21rem;
 }
 
-.buttons {
+.button-container {
   position: absolute;
   display: flex;
   justify-content: space-between;
