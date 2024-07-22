@@ -1,0 +1,54 @@
+.project-summary {
+  color: white;
+  width: 324px;
+}
+
+.header-image {
+  width: 324px;
+  height: 151px;
+}
+
+.description {
+  font-size: 13px;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle-container {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  display: flex;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle-name {
+  color: #556772;
+  width: 104px;
+}
+
+.subtitle-content {
+  color: #67c1f5;
+}
+
+.stack-name {
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  color: #556772;
+}
+
+.stack-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stack {
+  padding: 0.25rem 0.5rem;
+  color: #67c1f5;
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.7rem;
+  border-radius: 10px;
+  background-color: #243e50;
+}

@@ -3,25 +3,25 @@ import projectImg from '@/assets/images/image2.jpg';
 const projects = [
   [
     {
-      id: 'portfolio',
+      id: 'Portfolio',
       name: 'Portfolio',
       cardImg: projectImg,
       category: 'WEB PROJECT',
     },
     {
-      id: 'nogari',
+      id: 'Nogari',
       name: 'Nogari',
       cardImg: projectImg,
       category: 'WEB PROJECT',
     },
     {
-      id: 'tink',
+      id: 'Tink',
       name: 'Tink',
       cardImg: projectImg,
       category: 'WEB PROJECT',
     },
     {
-      id: 'puppyLink',
+      id: 'PuppyLink',
       name: 'PuppyLink',
       cardImg: projectImg,
       category: 'WEB PROJECT',
@@ -35,7 +35,7 @@ const projects = [
   ],
   [
     {
-      id: 'lunchBot',
+      id: 'LunchBot',
       name: 'LunchBot',
       cardImg: projectImg,
       category: 'OTHERS',
