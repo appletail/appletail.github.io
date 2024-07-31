@@ -26,15 +26,13 @@ function ProjectDetail() {
   const [markdownContent, setMarkdownContent] = useState('');
 
   useEffect(() => {
-    const fetchMarkdown = async () => {
-      const response = await fetch(
-        `/projects/${projectName}/${projectName}.md`
+    (() => {
+      import(`@/assets/projects/${projectName}/${projectName}.md`).then(
+        (markdownText) => {
+          setMarkdownContent(markdownText.default);
+        }
       );
-      const markdownText = await response.text();
-      setMarkdownContent(markdownText);
-    };
-
-    fetchMarkdown();
+    })();
   }, [projectName]);
 
   return (
