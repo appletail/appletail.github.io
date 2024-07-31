@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import remarkGfm from 'remark-gfm';
 import Markdown from 'react-markdown';
 import styles from './ProjectDetailTemplate.module.css';
@@ -17,8 +17,20 @@ function ProjectDetailTemplate({
   projectSummary: ProjectSummary;
   markdown: string;
 }) {
+  const [imageSrc, setImageSrc] = useState('');
+
   const img = (props) => {
-    const imageSrc = `/projects/${projectName}/${props.src}`;
+    useEffect(() => {
+      (() =>
+        import(`@/assets/projects/${projectName}/${props.src}`)
+          .then((imgSrc) => {
+            setImageSrc(imgSrc.default);
+          })
+          .catch(() => {
+            setImageSrc('');
+          }))();
+    }, [projectName]);
+
     return <img src={imageSrc} alt={projectName} />;
   };
 
