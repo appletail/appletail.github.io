@@ -2,21 +2,13 @@ import React from 'react';
 import header_image from '@/assets/images/image1.jpg';
 import styles from './ProjectSummary.module.css';
 
-interface ProjectSummay {
-  description: string;
-  period: string;
-  member: string;
-  platform: string;
-  stacks: string[];
-}
-
 function ProjectSummary({
   description,
   period,
   member,
   platform,
   stacks,
-}: ProjectSummay) {
+}: ProjectSummary) {
   return (
     <div className={styles['project-summary']}>
       <img
@@ -43,7 +35,9 @@ function ProjectSummary({
         <div className={styles['stack-name']}>스택</div>
         <div className={styles['stack-container']}>
           {stacks.map((stack) => (
-            <div className={styles.stack}>{stack}</div>
+            <div className={styles.stack} key={stack}>
+              {stack}
+            </div>
           ))}
         </div>
       </div>

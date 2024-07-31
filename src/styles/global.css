@@ -72,3 +72,30 @@ th {
 a {
   text-decoration-line: none;
 }
+
+@font-face {
+  font-family: 'Pretendard Regular';
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/Pretendard-Regular.ttf') format('truetype'),
+    url('../assets/fonts/Pretendard-Regular.otf') format('opentype'),
+    url('../assets/fonts/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard Medium';
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/Pretendard-Medium.ttf') format('truetype'),
+    url('../assets/fonts/Pretendard-Medium.otf') format('opentype'),
+    url('../assets/fonts/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard Bold';
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/Pretendard-Bold.ttf') format('truetype'),
+    url('../assets/fonts/Pretendard-Bold.otf') format('opentype'),
+    url('../assets/fonts/Pretendard-Bold.woff') format('woff');
+}
