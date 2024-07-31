@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from '@/components/ProjectListTitle/ProjectListTitle.module.css';
+import Line from '../Line/Line';
 
 function ProjectListTitle({ name, count }: { name: string; count: number }) {
   return (
     <div className={styles.title}>
       <span>{name}</span>
       <span className={styles['list-count']}>{`(${count})`}</span>
-      <hr className={styles.line} />
+      <Line color="#4e555f" />
     </div>
   );
 }
