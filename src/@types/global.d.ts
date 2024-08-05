@@ -1,10 +1,19 @@
 declare module '*.module.css' {
-  const content: Record<string, string>;
-  export default content;
+  const classes: { [key: string]: string };
+  export default classes;
 }
 declare module '*.jpg';
 declare module '*.png';
 declare module '*.md';
+declare module '*.svg' {
+  import * as React from 'react';
+
+  const ReactComponent: React.FunctionComponent<
+    React.SVGProps<SVGSVGElement> & { title?: string }
+  >;
+
+  export default ReactComponent;
+}
 
 interface Project {
   id: string;

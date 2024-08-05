@@ -1,0 +1,101 @@
+.about-me {
+  position: fixed;
+  z-index: -5;
+  background-image: url(https://community.akamai.steamstatic.com/public/images/profile/2020/bg_dots.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  color: #dcdcdc;
+}
+
+.profile-background {
+  width: 952px;
+  background: radial-gradient(
+      farthest-side at top right,
+      rgba(109, 38, 44, 0.301),
+      transparent 500px
+    ),
+    radial-gradient(
+      farthest-corner at top left,
+      rgba(50, 255, 193, 0.103),
+      transparent 600px
+    ),
+    radial-gradient(
+      farthest-corner at bottom right,
+      rgba(109, 38, 44, 0),
+      transparent 500px
+    ),
+    radial-gradient(
+      farthest-corner at bottom left,
+      rgba(50, 255, 193, 0.103),
+      transparent 600px
+    );
+  background-color: rgba(34, 35, 48, 0.93);
+  padding: 16px 12px 64px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  padding: 24px 17px 20px;
+  margin: 0 auto;
+}
+
+.profile-img {
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  object-position: center 22%;
+  margin-right: 2.25rem;
+}
+
+.name {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+}
+
+.content-left {
+  width: 70%;
+  padding-right: 2rem;
+}
+
+.content-right {
+  background-color: #1012144d;
+  width: 30%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-detail {
+  color: #dcdcdc;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.external-link {
+  color: gray;
+  margin-left: 0.2rem;
+}

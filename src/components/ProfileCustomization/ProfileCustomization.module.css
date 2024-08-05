@@ -1,0 +1,26 @@
+.customization-area {
+  border-radius: 5px;
+  background-color: #1012144d;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(115, 173, 184, 0.247) 0%,
+    rgba(43, 45, 68, 0.93) 90%
+  );
+}
+
+.customization_block {
+  padding: 20px 10px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
