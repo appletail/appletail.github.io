@@ -41,10 +41,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.md$/i,
-        use: 'raw-loader',
-      },
-      {
         test: /\.(tsx|ts|jsx|js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
@@ -73,7 +69,16 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|jpeg|gif|png|svg|ico)?$/,
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.md$/i,
+        use: 'raw-loader',
+      },
+      {
+        test: /\.(jpg|jpeg|gif|png|ico)?$/,
         type: 'asset',
       },
       {

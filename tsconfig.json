@@ -14,7 +14,8 @@
     "moduleResolution": "Node",
     "declaration": true,
     "emitDeclarationOnly": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": ["src"]
 }
