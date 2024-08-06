@@ -1,6 +1,7 @@
 .customization-area {
   border-radius: 5px;
   background-color: #1012144d;
+  margin-bottom: 12px;
 }
 
 .header {
@@ -22,5 +23,5 @@
   padding: 20px 10px 11px;
   display: flex;
   flex-direction: column;
-  gap: 21px;
+  gap: 10px;
 }

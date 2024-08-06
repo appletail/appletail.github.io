@@ -1,0 +1,37 @@
+.profile-block {
+  display: flex;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #0000004d;
+  border-radius: 0.5rem;
+}
+
+.picture {
+  width: 30%;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.content {
+  width: 80%;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.host {
+  color: rgb(192, 192, 192);
+  font-size: small;
+}
+
+.content hr {
+  margin-bottom: 0.5rem;
+}
+.content span {
+  margin-right: 0.5rem;
+}
+
+.detail {
+  margin-top: 0.5rem;
+}

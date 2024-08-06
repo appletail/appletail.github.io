@@ -2,9 +2,18 @@ declare module '*.module.css' {
   const classes: { [key: string]: string };
   export default classes;
 }
-declare module '*.jpg';
-declare module '*.png';
-declare module '*.md';
+declare module '*.jpg' {
+  const jpg: string;
+  export default jpg;
+}
+declare module '*.png' {
+  const png: string;
+  export default png;
+}
+declare module '*.md' {
+  const md: string;
+  export default md;
+}
 declare module '*.svg' {
   import * as React from 'react';
 
