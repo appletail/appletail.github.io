@@ -64,7 +64,11 @@ function Profile() {
           />
           <div>
             <div className={styles.name}>{name}</div>
-            <div>{aboutMe}</div>
+            <div>
+              {aboutMe.map((content) => (
+                <div key={content}>{content}</div>
+              ))}
+            </div>
           </div>
         </div>
         <div className={styles.content}>
@@ -87,24 +91,26 @@ function Profile() {
             />
           </div>
           <div className={styles['content-right']}>
-            <div className={styles.contact}>CONTACT</div>
-            <div className={styles['contact-content']}>
-              <div>{contact.phone}</div>
-              <div>{contact.email}</div>
-              <a href={contact.github} target="_blank" rel="noreferrer">
-                <div className={styles['contact-detail']}>
-                  <Github className={styles.icon} />
-                  <span>Github</span>
-                  <LuExternalLink className={styles['external-link']} />
-                </div>
-              </a>
-              <a href={contact.blog} target="_blank" rel="noreferrer">
-                <div className={styles['contact-detail']}>
-                  <Tistory className={styles.icon} />
-                  <span>Blog</span>
-                  <LuExternalLink className={styles['external-link']} />
-                </div>
-              </a>
+            <div className={styles['content-box']}>
+              <div className={styles.contact}>CONTACT</div>
+              <div className={styles['contact-content']}>
+                <div>{contact.phone}</div>
+                <div>{contact.email}</div>
+                <a href={contact.github} target="_blank" rel="noreferrer">
+                  <div className={styles['contact-detail']}>
+                    <Github className={styles.icon} />
+                    <span>Github</span>
+                    <LuExternalLink className={styles['external-link']} />
+                  </div>
+                </a>
+                <a href={contact.blog} target="_blank" rel="noreferrer">
+                  <div className={styles['contact-detail']}>
+                    <Tistory className={styles.icon} />
+                    <span>Blog</span>
+                    <LuExternalLink className={styles['external-link']} />
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>

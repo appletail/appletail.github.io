@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import remarkGfm from 'remark-gfm';
 import Markdown from 'react-markdown';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import styles from './ProjectDetailTemplate.module.css';
 import ProjectImageCarousel from '@/components/ProjectImageCarousel/ProjectImageCarousel';
 import ProjectSummary from '@/components/ProjectSummary/ProjectSummary';
 import Line from '@/components/Line/Line';
+import PictureModal from '@/components/PictureModal/PictureModal';
+import Github from '@/assets/images/icons/Github.svg';
+import Figma from '@/assets/images/icons/Figma.svg';
 
 function ProjectDetailTemplate({
   projectName,
@@ -17,9 +21,17 @@ function ProjectDetailTemplate({
   projectSummary: ProjectSummary;
   markdown: string;
 }) {
-  const [imageSrc, setImageSrc] = useState('');
+  const [isModalOn, setIsModalOn] = useState(false);
+  const [modalPicture, setModalPicture] = useState('');
+
+  const setPictureModal = useCallback((picture: string) => {
+    setIsModalOn(true);
+    setModalPicture(picture as string);
+  }, []);
 
   const img = (props) => {
+    const [imageSrc, setImageSrc] = useState('');
+
     useEffect(() => {
       (() =>
         import(`@/assets/projects/${projectName}/${props.src}`)
@@ -31,7 +43,19 @@ function ProjectDetailTemplate({
           }))();
     }, [projectName]);
 
-    return <img src={imageSrc} alt={projectName} />;
+    return (
+      <div
+        onClick={() => setPictureModal(imageSrc)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') setPictureModal(imageSrc);
+        }}
+        aria-label="open picture modal"
+        role="button"
+        tabIndex={0}
+      >
+        <img src={imageSrc} alt={props.node.properties.alt} />
+      </div>
+    );
   };
 
   const h2 = (props) => (
@@ -43,7 +67,13 @@ function ProjectDetailTemplate({
 
   const a = (props) => (
     <a href={props.href} target="_blank" rel="noreferrer">
-      {props.href}
+      {props.children === 'github' ? (
+        <Github />
+      ) : props.children === 'figma' ? (
+        <Figma />
+      ) : (
+        <span>{props.children}</span>
+      )}
     </a>
   );
 
@@ -51,8 +81,13 @@ function ProjectDetailTemplate({
     <div className={styles['detail-container']}>
       <div className={styles.name}>{projectName}</div>
       <div className={styles.hightlight}>
-        <ProjectImageCarousel images={images} />
+        <ProjectImageCarousel
+          images={images}
+          setModalPicture={setModalPicture}
+          setIsModalOn={setIsModalOn}
+        />
         <ProjectSummary
+          header_image={projectSummary.header_image}
           description={projectSummary.description}
           member={projectSummary.member}
           period={projectSummary.period}
@@ -67,6 +102,11 @@ function ProjectDetailTemplate({
       >
         {markdown}
       </Markdown>
+      <PictureModal
+        picture={modalPicture}
+        isModalOn={isModalOn}
+        setIsModalOn={setIsModalOn}
+      />
     </div>
   );
 }

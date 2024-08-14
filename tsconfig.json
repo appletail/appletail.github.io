@@ -15,7 +15,8 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "isolatedModules": true,
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "types": ["webpack-env"]
   },
   "include": ["src"]
 }

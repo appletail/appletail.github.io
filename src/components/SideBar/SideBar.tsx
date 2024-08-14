@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import styles from '@/components/SideBar/SideBar.module.css';
 import Collection from '../Collection/Collection';
-import projects from '@/constants/project';
+import projects from '@/constants/projectList';
 import pathName from '@/route/pathName';
 
 function SideBar() {

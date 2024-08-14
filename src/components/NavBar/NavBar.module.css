@@ -17,11 +17,16 @@
   gap: 1.3rem;
 }
 
-.nav-arrow-disable {
-  color: #3d4450;
+.nav-arrow-container {
+  display: flex;
+  font-size: 1.5rem;
+  gap: 1rem;
 }
 .nav-arrow {
   color: #67707b;
+}
+.nav-arrow-disable {
+  color: #3d4450;
 }
 .nav-arrow:hover {
   cursor: pointer;

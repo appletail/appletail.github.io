@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import projects from '@/constants/project';
+import projects from '@/constants/projectList';
 import ProjectListTemplate from '@/template/ProjectListTemplate';
 
 function ProjectList() {

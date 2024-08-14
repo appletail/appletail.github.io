@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styles from './ProfileEducation.module.css';
 
 function ProfileEducation({
@@ -15,10 +15,10 @@ function ProfileEducation({
   setIsModalOn: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const { period, content, picture } = education;
-  const setPictureModal = () => {
+  const setPictureModal = useCallback(() => {
     setIsModalOn(true);
     setModalPicture(picture as string);
-  };
+  }, []);
   return (
     <div className={styles['profile-block']}>
       {picture && (

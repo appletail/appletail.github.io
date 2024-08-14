@@ -32,7 +32,7 @@
       transparent 600px
     );
   background-color: rgba(34, 35, 48, 0.93);
-  padding: 16px 12px 64px;
+  padding: 16px 12px 128px;
   margin: 0 auto;
 }
 
@@ -68,9 +68,12 @@
 }
 
 .content-right {
-  background-color: #1012144d;
   width: 30%;
-  padding: 10px;
+}
+
+.content-box {
+  background-color: #1012144d;
+  padding: 10px 10px 50px;
   border-radius: 5px;
 }
 

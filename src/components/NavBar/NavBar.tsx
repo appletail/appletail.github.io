@@ -1,5 +1,6 @@
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import styles from './NavBar.module.css';
 import navMenus from '@/constants/navbar';
 
@@ -14,21 +15,19 @@ function NavBar() {
   return (
     <header className={styles.gnb}>
       <div className={styles['header-content']}>
-        <div>
-          <button
+        <div className={styles['nav-arrow-container']}>
+          <FaArrowLeft
             type="button"
             className={styles['nav-arrow']}
             onClick={() => navigate(-1)}
-          >
-            ←
-          </button>
-          <button
+            aria-label="previous page"
+          />
+          <FaArrowRight
             type="button"
             onClick={() => navigate(1)}
             className={styles['nav-arrow']}
-          >
-            →
-          </button>
+            aria-label="next page"
+          />
         </div>
         <div className={styles['nav-layout']}>
           {navMenus.map((navMenu) => (
