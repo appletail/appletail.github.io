@@ -55,7 +55,9 @@
 }
 
 .markdown img {
+  cursor: pointer;
   max-width: 932px;
+  max-height: 500px;
 }
 
 .markdown a {

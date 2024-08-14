@@ -1,5 +1,6 @@
 import puppy_header from '@/assets/images/projects/PuppyLink/header.png';
 import nogari_header from '@/assets/images/projects/Nogari/header.png';
+import tink_header from '@/assets/images/projects/Tink/header.png';
 
 const projectSummarys = {
   Portfolio: {
@@ -34,18 +35,20 @@ const projectSummarys = {
     ],
   },
   Tink: {
-    header_image: puppy_header,
-    description: 'Tink 기능을 활용한 퍼피링크(puppy link) 프로젝트',
-    period: '23.01.17 ~ 23.02.17',
-    member: '6명 (FE 2인 / BE 4인)',
-    platform: 'Web Mobile',
+    header_image: tink_header,
+    description:
+      'Ravelry의 API를 통해 수집한 데이터를 바탕으로 뜨개질 도안 및 실을 추천하는 프로젝트입니다. 또한, 이미지에서 색을 추출하고 어울리는 색을 추천하는 기능이 포함되어있습니다.',
+    period: '23.03.06 ~ 23.04.07',
+    member: '6명 (FE 3인 / BE 3인)',
+    platform: 'Web',
     stacks: [
-      'React',
       'TypeScript',
+      'React',
       'Vite',
-      'CRX',
-      'Styled-Component',
-      'AWS lambda',
+      'Tailwind-css',
+      'react-quill',
+      'extract-colors',
+      'simpler-color',
     ],
   },
   PuppyLink: {

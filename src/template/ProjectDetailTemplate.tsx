@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import remarkGfm from 'remark-gfm';
 import Markdown from 'react-markdown';
 import { FaExternalLinkAlt } from 'react-icons/fa';
@@ -21,6 +21,14 @@ function ProjectDetailTemplate({
   projectSummary: ProjectSummary;
   markdown: string;
 }) {
+  const [isModalOn, setIsModalOn] = useState(false);
+  const [modalPicture, setModalPicture] = useState('');
+
+  const setPictureModal = useCallback((picture: string) => {
+    setIsModalOn(true);
+    setModalPicture(picture as string);
+  }, []);
+
   const img = (props) => {
     const [imageSrc, setImageSrc] = useState('');
 
@@ -35,7 +43,19 @@ function ProjectDetailTemplate({
           }))();
     }, [projectName]);
 
-    return <img src={imageSrc} alt={props.node.properties.alt} />;
+    return (
+      <div
+        onClick={() => setPictureModal(imageSrc)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') setPictureModal(imageSrc);
+        }}
+        aria-label="open picture modal"
+        role="button"
+        tabIndex={0}
+      >
+        <img src={imageSrc} alt={props.node.properties.alt} />
+      </div>
+    );
   };
 
   const h2 = (props) => (
@@ -56,8 +76,7 @@ function ProjectDetailTemplate({
       )}
     </a>
   );
-  const [isModalOn, setIsModalOn] = useState(false);
-  const [modalPicture, setModalPicture] = useState('');
+
   return (
     <div className={styles['detail-container']}>
       <div className={styles.name}>{projectName}</div>
