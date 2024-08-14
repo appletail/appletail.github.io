@@ -1,4 +1,6 @@
 import projectImg from '@/assets/images/image2.jpg';
+import PuppyLink from '@/assets/images/projects/PuppyLink/logo.png';
+import Nogari from '@/assets/images/projects/Nogari/logo.png';
 
 const projects = [
   [
@@ -11,7 +13,7 @@ const projects = [
     {
       id: 'Nogari',
       name: 'Nogari',
-      cardImg: projectImg,
+      cardImg: Nogari,
       category: 'WEB PROJECT',
     },
     {
@@ -23,7 +25,7 @@ const projects = [
     {
       id: 'PuppyLink',
       name: 'PuppyLink',
-      cardImg: projectImg,
+      cardImg: PuppyLink,
       category: 'WEB PROJECT',
     },
     {

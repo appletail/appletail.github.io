@@ -23,15 +23,7 @@
 .image {
   max-width: 37rem;
   max-height: 21rem;
-}
-
-.button-container {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  width: 37rem;
-  top: 50%;
-  padding: 0 1rem;
+  cursor: pointer;
 }
 
 .button {
@@ -46,8 +38,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
-
+.left {
+  top: 50%;
+  left: 2%;
+}
+.right {
+  top: 50%;
+  right: 2%;
+}
 .prev {
   width: 0px;
   height: 0px;

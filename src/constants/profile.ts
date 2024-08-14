@@ -21,8 +21,11 @@ import jira from '@/assets/images/icons/Jira.svg';
 const profile = {
   profileImg,
   name: '심재원',
-  aboutMe:
-    '올해의 게임 175여 개를 수상하고 250개 이상의 완벽한 평가를 받은 Red Dead Redemption 2는 현대 시대가 시작될 무렵 무법자인 아서 모건과 악명 높은 반 더 린드 갱단이 미국 전역을 따라 도주하는 장대한 서사시입니다. 모두가 함께 즐길 수 있는 생생한 세계인 Red Dead 온라인 역시 포함됩니다. 올해의 게임 175여 개를 수상하고 250개 이상의 완벽한 평가를 받은 Red Dead Redemption 2는 현대 시대가 시작될 무렵 무법자인 아서 모건과 악명 높은 반 더 린드 갱단이 미국 전역을 따라 도주하는 장대한 서사시입니다. 모두가 함께 즐길 수 있는 생생한 세계인 Red Dead 온라인 역시 포함됩니다.',
+  aboutMe: [
+    '상상을 현실로 구현하고 사용자들이 만족해하는 모습에서 즐거움을 느낍니다.',
+    '프로젝트에 맞는 최적의 기술을 선택하여 최선의 결과물을 도출하기 위해 노력합니다.',
+    '언제나 새로운 도전을 통해 성장하는 프론트엔드 개발자가 되겠습니다.',
+  ],
   skills: [
     { name: 'react', svg: react },
     { name: 'javascript', svg: javascript },

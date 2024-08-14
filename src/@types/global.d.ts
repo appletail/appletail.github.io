@@ -32,9 +32,20 @@ interface Project {
 }
 
 interface ProjectSummary {
+  header_image: string;
   description: string;
   period: string;
   member: string;
   platform: string;
   stacks: string[];
+}
+
+interface ErrResponse {
+  err: {
+    response: {
+      data: {
+        code: '1403' | '1500' | '2403' | '3403';
+      };
+    };
+  };
 }

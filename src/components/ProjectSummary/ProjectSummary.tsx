@@ -1,8 +1,8 @@
 import React from 'react';
-import header_image from '@/assets/images/image1.jpg';
 import styles from './ProjectSummary.module.css';
 
 function ProjectSummary({
+  header_image,
   description,
   period,
   member,

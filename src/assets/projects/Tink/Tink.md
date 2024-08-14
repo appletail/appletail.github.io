@@ -1,3 +1,11 @@
+## 스택 선정 이유
+
+- TypeScript: 오타 방지 및 디버깅 용이
+- React: 방대한 **라이브러리**를 활용하여 개발 효율 향상
+- Vite: Esbuild로 미리 번들링한 모듈을 사용해 **dev server**의 빠른 구동
+- Tailwind-css: preset 기능을 사용해 **디자인 시스템**을 구축하고, 빠른 CSS 코드 작성
+- css-module: Tailwind로 인해 **코드 가독성**이 하락할 때 사용
+
 ## 담당역할
 
 ### 프론트엔드 리더
@@ -8,14 +16,6 @@
 - Tailwind CSS 초기 설정
 - 디자인 시스템 설계
 - axios를 사용한 API 호출
-
-## 스택 선정 이유
-
-- TypeScript: 오타 방지 및 디버깅 용이
-- React: 방대한 **라이브러리**를 활용하여 개발 효율 향상
-- Vite: Esbuild로 미리 번들링한 모듈을 사용해 **dev server**의 빠른 구동
-- Tailwind-css: preset 기능을 사용해 **디자인 시스템**을 구축하고, 빠른 CSS 코드 작성
-- css-module: Tailwind로 인해 **코드 가독성**이 하락할 때 사용
 
 ## 퍼피링크
 
