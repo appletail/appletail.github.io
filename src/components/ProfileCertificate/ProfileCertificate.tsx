@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styles from './ProfileCertificate.module.css';
 
 function ProfileCertificate({
@@ -15,10 +15,10 @@ function ProfileCertificate({
   setIsModalOn: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const { date, content, picture } = certificate;
-  const setPictureModal = () => {
+  const setPictureModal = useCallback(() => {
     setIsModalOn(true);
     setModalPicture(picture as string);
-  };
+  }, []);
   return (
     <div className={styles['profile-block']}>
       {picture && (
@@ -32,7 +32,7 @@ function ProfileCertificate({
           tabIndex={0}
           className={styles.picture}
         >
-          <img src={picture} alt={content} />
+          <img src={picture} alt={content} loading="lazy" />
         </div>
       )}
       <div className={styles.content}>

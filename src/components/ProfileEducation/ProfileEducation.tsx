@@ -32,7 +32,7 @@ function ProfileEducation({
           tabIndex={0}
           className={styles.picture}
         >
-          <img src={picture} alt={content} />
+          <img src={picture} alt={content} loading="lazy" />
         </div>
       )}
       <div className={styles.content}>
