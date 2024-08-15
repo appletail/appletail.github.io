@@ -18,10 +18,10 @@ function ProfileAward({
   setIsModalOn: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const { picture, date, detail, host, name, prize } = award;
-  const setPictureModal = () => {
+  const setPictureModal = useCallback(() => {
     setIsModalOn(true);
     setModalPicture(picture as string);
-  };
+  }, []);
   return (
     <div className={styles['profile-block']}>
       {picture && (
@@ -35,7 +35,7 @@ function ProfileAward({
           tabIndex={0}
           className={styles.picture}
         >
-          <img src={picture} alt={name} />
+          <img src={picture} alt={name} loading="lazy" />
         </div>
       )}
       <div className={styles.content}>

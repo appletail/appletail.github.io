@@ -2,6 +2,7 @@ import projectImg from '@/assets/images/image2.jpg';
 import PuppyLink from '@/assets/images/projects/PuppyLink/logo.png';
 import Nogari from '@/assets/images/projects/Nogari/logo.png';
 import Tink from '@/assets/images/projects/Tink/logo.png';
+import LunchBot from '@/assets/images/projects/LunchBot/logo.png';
 
 const projects = [
   [
@@ -29,18 +30,18 @@ const projects = [
       cardImg: PuppyLink,
       category: 'WEB PROJECT',
     },
-    {
-      id: 'SCM',
-      name: 'SCM',
-      cardImg: projectImg,
-      category: 'WEB PROJECT',
-    },
   ],
   [
     {
       id: 'LunchBot',
       name: 'LunchBot',
-      cardImg: projectImg,
+      cardImg: LunchBot,
+      category: 'OTHERS',
+    },
+    {
+      id: 'shortURL',
+      name: 'shortURL',
+      cardImg: LunchBot,
       category: 'OTHERS',
     },
   ],

@@ -35,7 +35,7 @@
 - JavaScript로 만들어진 라이브러리를 TypeScript에 적용하는 방법을 배웠습니다.
 - commit 메시지 템플릿과 merge request 템플릿을 만들고 공유하며 **협업의 효율성**을 높이는 방법을 배웠습니다.
 
-## 소스 코드
+## 관련 링크
 
 [github](https://github.com/appletail/Tink)
 [figma](https://www.figma.com/design/x50c9FDAEuH6kPKLP9OO85/Tink?node-id=0-1&t=vsXX5meCELJJ9XL3-1)
