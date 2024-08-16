@@ -3,6 +3,7 @@ import PuppyLink from '@/assets/images/projects/PuppyLink/logo.png';
 import Nogari from '@/assets/images/projects/Nogari/logo.png';
 import Tink from '@/assets/images/projects/Tink/logo.png';
 import LunchBot from '@/assets/images/projects/LunchBot/logo.png';
+import shortURL from '@/assets/images/projects/shortURL/logo.png';
 
 const projects = [
   [
@@ -41,7 +42,7 @@ const projects = [
     {
       id: 'shortURL',
       name: 'shortURL',
-      cardImg: LunchBot,
+      cardImg: shortURL,
       category: 'OTHERS',
     },
   ],

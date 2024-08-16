@@ -44,17 +44,17 @@ function ProjectDetailTemplate({
     }, [projectName]);
 
     return (
-      <div
+      <button
         onClick={() => setPictureModal(imageSrc)}
         onKeyDown={(e) => {
           if (e.key === 'Enter') setPictureModal(imageSrc);
         }}
+        type="button"
         aria-label="open picture modal"
-        role="button"
         tabIndex={0}
       >
         <img src={imageSrc} alt={props.node.properties.alt} />
-      </div>
+      </button>
     );
   };
 
