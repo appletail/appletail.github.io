@@ -19,6 +19,10 @@ function ProjectImageCarousel({
     }
   }, [currentImg]);
 
+  useEffect(() => {
+    setCurrentImg(0);
+  }, [images]);
+
   const Next = () => {
     if (currentImg >= images.length - 1) setCurrentImg(0);
     else setCurrentImg(currentImg + 1);

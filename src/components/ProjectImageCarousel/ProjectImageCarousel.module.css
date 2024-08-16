@@ -40,6 +40,9 @@
   align-items: center;
   position: absolute;
 }
+.button:hover {
+  background-color: rgba(104, 165, 255, 0.651);
+}
 .left {
   top: 50%;
   left: 2%;

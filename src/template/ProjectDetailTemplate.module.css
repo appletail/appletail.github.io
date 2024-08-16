@@ -58,6 +58,7 @@
   cursor: pointer;
   max-width: 932px;
   max-height: 500px;
+  margin-bottom: 0.5rem;
 }
 
 .markdown a {

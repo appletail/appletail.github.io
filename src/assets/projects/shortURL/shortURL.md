@@ -1,19 +1,18 @@
 ## 주요 기능
 
-- 노션에서 작성한 글을 tistory와 github로 이전
-- 크롬 확장프로그램을 이용한 편의성 제공
-- 튜토리얼 페이지 지원
-
-## 프로젝트 성과
-
-SSAFY 자율 프로젝트 **우수상**  
-VALUE UP 교육생 공모전 **대상**
+- **긴 URL을 짧게 줄여**서 사용자가 눈으로 읽고 쉽게 옮겨 적을 수 있도록 도와줌
+- 단축 URL 클릭시 **클립보드에 복사**됨
+- qr 코드 클릭시 **png 파일로 다운로드**됨
+- 본인의 NAVER Open API key만 입력하면 **자신만의 shortURL 제작** 가능
+- 데스크탑 애플리케이션으로 만들어져있어 자신만의 **shortURL을 손쉽게 공유** 가능
 
 ## 스택 선정 이유
 
-- Styled-component: JS와 CSS 간의 **상수와 함수 공유**
-- CRXJS: React를 사용한 **크롬 확장프로그램** 개발
-- AWS lambda: **Java Spring**에서 적은 자원으로 **Javascript 라이브러리 호출**을 위함
+- Vite: CRA와 달리 필수적인 기능만 들어서 **가볍고**, webpack 보다 **빠른 dev server**를 활용하기 위함
+- TypeScript: **손쉬운 디버깅**을 통해 버그를 사전에 방지와 **IDE 자동 리스트업 기능**을 사용하기 위함
+- React: NAVER Open API와 **통신하는 기능만 구현**하면 되므로 가장 익숙한 라이브러리를 선택
+- electron: 손쉬운 **데스크톱 애플리케이션 생성**과 **효과적인 cors 에러 해결**이 가능해 선택
+- axios: fetch보다 **간결하고 직관적인 코드**를 작성할 수 있어 선택
 
 ## 작업 기여도
 
@@ -46,47 +45,36 @@ VALUE UP 교육생 공모전 **대상**
 
 ## 관련 링크
 
-[github](https://github.com/appletail/Nogari)
-[figma](https://www.figma.com/design/kAicnJo6OXkvUTQYkUyY0f/Nogari?node-id=1-2&t=2TxuhPCNJ5gcttWe-1)
-[크롬 웹스토어](https://chromewebstore.google.com/detail/nogari-%EB%85%B8%EC%85%98%EC%97%90%EC%84%9C-%EA%B0%80%EB%8A%94-%EC%9D%B4%EC%95%BC%EA%B8%B0/hjdmhaniikfbncdhikfbgfkpchicegfp?utm_source=ext_app_menu)
+[github](https://github.com/appletail/shortURL-App)
 
 ## 트러블 슈팅
 
-### 1. 크롬 확장프로그램
+### 1. [cors 에러](https://appletail.tistory.com/144)
 
-![Nogari1](image/Nogari1.png)  
-**[문제점]** 사용 방법이 **복잡**하다는 사용자의 피드백을 받았습니다.
+![shortURL1](image/shortURL1.png)  
+**[문제점]** Open API 서버와의 cors 에러가 발생했습니다.
 
-**[해결]** 노션에서 URL을 복사한 뒤 노가리 웹사이트에 붙여넣기 하는 과정이 복잡하다고 판단했습니다.  
-**노션 페이지 안에서** 원클릭으로 모든 기능이 작동한다면 UX를 향상 할 수 있을 것이라 생각해 **크롬 확장프로그램**을 계획했습니다.  
-빠른 개발과 편의를 위해 vite의 플러그인인 **CRXJS**를 사용해 react로 개발했습니다.
+**[해결]** cors 에러는 동일 출처가 아닐 경우에 발생하는 에러입니다.
 
-### 2. refetchOnWindowFocus: false
+- 서버가 존재하지 않기 때문에 **proxy 설정**을 통해 해결을 시도했습니다.
+- vite 자체적인 proxy 설정으로 **dev server**에서의 cors 에러를 해결했습니다.
 
-![Nogari2](image/Nogari2.png)  
-**[문제점]** 사용자가 작성중인 글이 간헐적으로 사라지는 문제가 있었습니다.
+하지만 **build 이후** 다시 한 번 cors 에러가 발생했습니다.
 
-**[해결]** 사용자의 이용동선을 예상해 문제상황을 구현했고, 창을 벗어났을 때 refetch가 발생하는 것을 발견했습니다.  
-**react query 공식문서**를 꼼꼼히 읽은 뒤 refetchOnWindowFocus: false를 추가해 문제를 해결했습니다.
+- 원인은 c:/경로/index.html에서 **null/js/module.js로 리소스를 요청**한 것이 됐기 때문이었습니다.
 
-### 3. 라이브러리 분석 및 수정
+탐색을 통해 **electron**을 사용하면 cors 에러가 없어진다는 것을 알게되었습니다.
 
-![Nogari3](image/Nogari3.png)  
-**[문제점]** notion-to-md 라이브러리의 경우 글꼴 색상, tistory 이미지 업로드 등의 기능이 없었습니다.
+- **로컬에서의 사용**을 목표로 했기 때문에 electron으로 만든 데스크탑 애플리케이션이 **프로젝트에 더 적합**하다고 판단했습니다.
+- electron의 **proxy 설정**을 통해 cors 에러를 해결했습니다.
 
-**[해결]** 노션의 글을 tistory에 그대로 옮기는 것이 목표였기에, **라이브러리를 분석**하고 필요한 부분을 **수정**해 사용할 수 있도록했습니다.
+### 2. [qr코드 다운로드 기능](https://appletail.tistory.com/146)
 
-- **폴더 및 파일 이름**을 통해 전체적인 구조를 파악했습니다.
-- index.ts를 시작으로 **데이터 흐름**을 따라가며 수정이 필요한 부분을 파악했습니다.
-- 분석한 것을 바탕으로 이미지 업로드, 글꼴 색상, 수학식 표현 기능 등을 추가했습니다.
+![shortURL2](image/shortURL2.png)  
+**[문제점]** API에서 제공하는 QR코드는 .qr 파일이었습니다. 하지만 .png 파일이 더 유용할 것이라 생각해 이를 다운로드하는 기능을 구현하고 싶었습니다.
 
-### 4. Java 서버에서 JavaScript 변환 기능 호출
+**[해결]** <a> 태그에 **download라는 속성**을 사용해 다운로드를 구현했습니다.
 
-![Nogari4](image/Nogari4.png)  
-**[문제점]** 서버는 Java로 이루어진반면 변환기능은 JavaScript로 만들어졌있었기 때문에 호출이 어려운 문제가 있었습니다.
-
-**[해결]** Java Scripting API, node.js 서버 호스팅, AWS lambda 세가지 해결책을 찾았고 **AWS lambda**를 채택했습니다. 판단 기준은 다음과 같았습니다.
-
-- Java Scripting API: 자바 내에서 JavaScript를 직접 구현하는 것은 좋았지만 **러닝커브가 높을 것**으로 판단했습니다.
-- node.js 서버 호스팅: 하나의 기능만을 위해 서버를 구현하고 호스팅하는 것은 **실제 금액적인 비용에서 손해**가 있을 것으로 판단했습니다.
-- AWS lambda: **낮은 러닝커브**라는 이점과 예상 사용량이 AWS lambda의 **무료 사용량**을 초과하지 않을 것이라는 이점을 고려해 채택했습니다. 물론, 콜드 스타트 지연으로 인해 응답시간이 늦어질 수 있는 문제가 있지만, 기능 자체가 실행에 오랜 시간이 걸리기에 문제 없을 것이라 판단했습니다.
+- download에는 파일 이름을 지정하는 **filename 옵션**이 있습니다.
+- 이 옵션을 사용할때 **확장자명을 함께 작성**하면 그 확장자로 다운로드가 가능하다는 것을 알게되었습니다.
+- 이 기능을 사용해 **.png 파일 다운로드** 기능을 구현했습니다.
