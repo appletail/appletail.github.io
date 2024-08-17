@@ -52,6 +52,7 @@
 
 .markdown P {
   margin-bottom: 1rem;
+  line-height: 1.7;
 }
 
 .markdown img {
