@@ -1,16 +1,16 @@
-import projectImg from '@/assets/images/image2.jpg';
 import PuppyLink from '@/assets/images/projects/PuppyLink/logo.png';
 import Nogari from '@/assets/images/projects/Nogari/logo.png';
 import Tink from '@/assets/images/projects/Tink/logo.png';
 import LunchBot from '@/assets/images/projects/LunchBot/logo.png';
 import shortURL from '@/assets/images/projects/shortURL/logo.png';
+import Portfolio from '@/assets/images/projects/Portfolio/logo.png';
 
 const projects = [
   [
     {
       id: 'Portfolio',
       name: 'Portfolio',
-      cardImg: projectImg,
+      cardImg: Portfolio,
       category: 'WEB PROJECT',
     },
     {
