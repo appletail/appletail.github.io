@@ -3,21 +3,23 @@ import Nogari from '@/assets/images/projects/Nogari/header.png';
 import Tink from '@/assets/images/projects/Tink/header.png';
 import LunchBot from '@/assets/images/projects/LunchBot/header.png';
 import shortURL from '@/assets/images/projects/shortURL/header.png';
+import Portfolio from '@/assets/images/projects/Portfolio/header.png';
 
 const projectSummarys = {
   Portfolio: {
-    header_image: PuppyLink,
-    description: 'Portfolio 기능을 활용한 퍼피링크(puppy link) 프로젝트',
-    period: '23.01.17 ~ 23.02.17',
-    member: '6명 (FE 2인 / BE 4인)',
-    platform: 'Web Mobile',
+    header_image: Portfolio,
+    description:
+      '그동안 수행했던 프로젝트를 소개하는 Portfolio 프로젝트입니다. 제가 좋아하는 Steam을 테마로 만들었습니다. scroll animation, carousel, modal과 같은 기능을 최대한 라이브러리의 사용없이 제작했습니다. 프로젝트 상세페이지의 경우 작성의 용이함을 위해 markdown을 html로 변환하는 라이브러리를 사용했습니다.',
+    period: '24.01.08 ~ 24.08.17',
+    member: '1인 프로젝트',
+    platform: 'Web',
     stacks: [
       'React',
+      'React-router',
       'TypeScript',
-      'Vite',
-      'CRX',
-      'Styled-Component',
-      'AWS lambda',
+      'webpack',
+      'css-module',
+      'React-markdown',
     ],
   },
   Nogari: {

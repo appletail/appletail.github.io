@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import remarkGfm from 'remark-gfm';
 import Markdown from 'react-markdown';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 import styles from './ProjectDetailTemplate.module.css';
 import ProjectImageCarousel from '@/components/ProjectImageCarousel/ProjectImageCarousel';
 import ProjectSummary from '@/components/ProjectSummary/ProjectSummary';

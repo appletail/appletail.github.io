@@ -9,6 +9,7 @@ const plugins = [
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
     template: './index.html',
+    favicon: 'favicon.ico',
   }),
 ];
 
@@ -75,7 +76,7 @@ module.exports = {
       },
       {
         test: /\.md$/i,
-        use: 'raw-loader',
+        type: 'asset/source',
       },
       {
         test: /\.(jpg|jpeg|gif|png|ico)?$/,

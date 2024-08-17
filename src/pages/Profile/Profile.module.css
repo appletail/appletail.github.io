@@ -2,7 +2,7 @@
   position: fixed;
   overflow: auto;
   z-index: -5;
-  background-image: url(https://community.akamai.steamstatic.com/public/images/profile/2020/bg_dots.png);
+  background-image: url('/src/assets/images/profile/bg_dots.png');
   background-size: cover;
   width: 100%;
   height: 100%;
