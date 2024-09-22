@@ -39,14 +39,14 @@
 
 ### 1. UI/UX 향상
 
-![LunchBot1](image/LunchBot1.png)  
+![LunchBot1](image/LunchBot1.webp)  
 **[문제점]** 초기 버전의 경우 식단표를 text만으로 제공했고 가독성이 부족하다는 피드백을 받았습니다.
 
 **[해결]** 해결하기 위해 디스코드의 embed 기능을 사용해 UI/UX를 향상했 습니다.
 
 ### 2. 재미 기능 추가
 
-![LunchBot2](image/LunchBot2.png)  
+![LunchBot2](image/LunchBot2.webp)  
 **[문제점]** 서비스 특성 상 점심시간 이후 이용률이 떨어지는 문제가 있었습니다.
 
 **[해결]** 사용자들에게서 추가했으면하는 기능이 무엇이 있는지 **의견을 수렴**했습니다.  

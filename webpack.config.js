@@ -79,7 +79,7 @@ module.exports = {
         type: 'asset/source',
       },
       {
-        test: /\.(jpg|jpeg|gif|png|ico)?$/,
+        test: /\.(jpg|jpeg|gif|png|ico|webp)?$/,
         type: 'asset',
       },
       {

@@ -42,7 +42,7 @@
 
 ### 1. [CORS 에러](https://appletail.tistory.com/144)
 
-![shortURL1](image/shortURL1.png)  
+![shortURL1](image/shortURL1.webp)  
 **[문제점]** Open API 서버와의 CORS 에러가 발생했습니다.
 
 **[해결]** CORS 에러는 동일 출처가 아닐 경우에 발생하는 에러입니다.
@@ -61,7 +61,7 @@
 
 ### 2. [qr코드 다운로드 기능](https://appletail.tistory.com/146)
 
-![shortURL2](image/shortURL2.png)  
+![shortURL2](image/shortURL2.webp)  
 **[문제점]** API에서 제공하는 QR코드는 ".qr" 파일이었습니다.  
 하지만 ".png" 파일이 더 유용할 것이라 생각해 이를 다운로드하는 기능을 구현하고 싶었습니다.
 

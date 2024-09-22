@@ -10,6 +10,10 @@ declare module '*.png' {
   const png: string;
   export default png;
 }
+declare module '*.webp' {
+  const webp: string;
+  export default webp;
+}
 declare module '*.md' {
   const md: string;
   export default md;

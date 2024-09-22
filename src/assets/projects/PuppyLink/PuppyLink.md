@@ -54,7 +54,7 @@ SSAFY 공통 프로젝트 **우수상**
 
 ### 1. 이벤트 버블링
 
-![PuppyLink1](image/PuppyLink1.png)  
+![PuppyLink1](image/PuppyLink1.webp)  
 **[문제점]** 모달 배경이 아닌 모달 컴포넌트를 클릭해도 모달이 종료되는 문제가 있었습니다.
 
 **[해결]** html에서의 이벤트 흐름을 공부했고, **이벤트 버블링**이 원인이라는 것을 알게되었습니다.  
@@ -62,7 +62,7 @@ SSAFY 공통 프로젝트 **우수상**
 
 ### 2. DRY 원칙 준수
 
-![PuppyLink2](image/PuppyLink2.png)  
+![PuppyLink2](image/PuppyLink2.webp)  
 **[문제점]** axios를 이용한 API 통신마다 baseURL을 작성하고 token을 호출해 가독성이 떨어지는 문제가 있었습니다.
 
 **[해결]** **DRY 원칙**을 준수하기 위해 **Axios Instance**를 만들어 baseURL을 반복 하지 않도록 했습니다.  
@@ -70,7 +70,7 @@ SSAFY 공통 프로젝트 **우수상**
 
 ### 3. log를 사용한 문제 원인 탐색 및 백엔드와의 협업
 
-![PuppyLink3](image/PuppyLink3.png)  
+![PuppyLink3](image/PuppyLink3.webp)  
 **[문제점]** API 통신중 컴포넌트가 사라지는 문제가 있었습니다.
 
 **[해결]** **git log**를 통해 최근 커밋 내용을 확인 하니 백엔드에서 DB에 **not null 속성의 컬럼**을 추가한 것을 발견했습니다.  
@@ -78,7 +78,7 @@ post data에 isActive를 추가한 뒤, 백엔드에 DB 초기화를 요청해 �
 
 ### 4. 관심사 분리를 통한 가독성 향상
 
-![PuppyLink4](image/PuppyLink4.png)  
+![PuppyLink4](image/PuppyLink4.webp)  
 **[문제점]** router의 페이지가 늘어남에 따라 가독성이 하락하고 원하는 코드를 찾기 어려운 문제가 발생했습니다.
 
 **[해결]** 코드 분리와 스프레드 연산자를 통해 관심사를 분리하고 가독성을 향상하였습니다.
