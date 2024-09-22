@@ -1,9 +1,9 @@
-import PuppyLink from '@/assets/images/projects/PuppyLink/header.png';
-import Nogari from '@/assets/images/projects/Nogari/header.png';
-import Tink from '@/assets/images/projects/Tink/header.png';
-import LunchBot from '@/assets/images/projects/LunchBot/header.png';
-import shortURL from '@/assets/images/projects/shortURL/header.png';
-import Portfolio from '@/assets/images/projects/Portfolio/header.png';
+import PuppyLink from '@/assets/images/projects/PuppyLink/header.webp';
+import Nogari from '@/assets/images/projects/Nogari/header.webp';
+import Tink from '@/assets/images/projects/Tink/header.webp';
+import LunchBot from '@/assets/images/projects/LunchBot/header.webp';
+import shortURL from '@/assets/images/projects/shortURL/header.webp';
+import Portfolio from '@/assets/images/projects/Portfolio/header.webp';
 
 const projectSummarys = {
   Portfolio: {

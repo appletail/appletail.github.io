@@ -54,7 +54,7 @@ scroll animation, carousel, modal을 **라이브러리 없이** 직접 구현
 
 ### 1. HashRouter
 
-![Portfolio1](image/Portfolio1.png)  
+![Portfolio1](image/Portfolio1.webp)  
 **[문제점]** 배포사이트에서 새로고침시 404페이지로 이동하는 오류가 발생했습니다.
 
 **[해결]** CSR의 특성으로 인해 발생하는 것이었습니다.
@@ -69,7 +69,7 @@ scroll animation, carousel, modal을 **라이브러리 없이** 직접 구현
 
 ### 2. scroll animation 최적화
 
-![Portfolio2](image/Portfolio2.png)  
+![Portfolio2](image/Portfolio2.webp)  
 **[문제점]** scroll animation을 구현한 결과 Scripting 시간이 길어지는 문제가 발생했습니다.
 
 **[해결]** 문제의 원인을 찾기 위해 animation hook이 실행되는 횟수를 추적했습니다.  
@@ -80,7 +80,7 @@ scroll animation, carousel, modal을 **라이브러리 없이** 직접 구현
 
 ### 3. css-module ide 인식
 
-![Portfolio3](image/Portfolio3.png)  
+![Portfolio3](image/Portfolio3.webp)  
 **[문제점]** css-module을 사용하며 IDE 자동 리스트업 기능이 없어 불편했습니다.
 
 **[해결]** css-module은 객체 형식으로 import되는만큼 리스트업이 가능할 것이라 생각하고 관련 라이브러리를 찾아봤습니다.  
@@ -89,7 +89,7 @@ scroll animation, carousel, modal을 **라이브러리 없이** 직접 구현
 
 ### 4. react-markdown
 
-![Portfolio4](image/Portfolio4.png)  
+![Portfolio4](image/Portfolio4.webp)  
 **[문제점]** 포트폴리오 상세 내용을 작성할 때 html 형식으로 작성하기에는 복잡했습니다. 그래서 편리하게 작성할 방법이 필요했습니다.
 
 **[해결]** 저는 옵시디언을 사용하여 **markdown 작성 방식**에 익숙했기 때문에 이를 활용하는 방법을 찾아봤습니다.  
@@ -99,7 +99,7 @@ scroll animation, carousel, modal을 **라이브러리 없이** 직접 구현
 
 ### 5. markdown 인식
 
-![Portfolio5](image/Portfolio5.png)  
+![Portfolio5](image/Portfolio5.webp)  
 **[문제점]** markdown 파일을 import하면 에러가 발생하는 문제가 있었습니다.
 
 **[해결]** typescript에서 타입이 정의되지 않아 발생하는 문제라고 판단했습니다.
@@ -118,7 +118,7 @@ scroll animation, carousel, modal을 **라이브러리 없이** 직접 구현
 
 ### 6. [dynamic import](https://appletail.tistory.com/142)
 
-![Portfolio6](image/Portfolio6.png)  
+![Portfolio6](image/Portfolio6.webp)  
 **[문제점]** public을 사용하는 동적 import 방식이 배포사이트에서 동작하지 않았습니다.
 
 **[해결]** public과 달리 **src 폴더**에 있는 번들링된 이미지 경로는 잘 찾았기 때문에 이를 활용할 방법을 탐색했습니다.  

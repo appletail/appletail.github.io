@@ -54,7 +54,7 @@ VALUE UP 교육생 공모전 **대상**
 
 ### 1. 크롬 확장프로그램
 
-![Nogari1](image/Nogari1.png)  
+![Nogari1](image/Nogari1.webp)  
 **[문제점]** 사용 방법이 **복잡**하다는 사용자의 피드백을 받았습니다.
 
 **[해결]** 노션에서 URL을 복사한 뒤 노가리 웹사이트에 붙여넣기 하는 과정이 복잡하다고 판단했습니다.  
@@ -63,7 +63,7 @@ VALUE UP 교육생 공모전 **대상**
 
 ### 2. refetchOnWindowFocus: false
 
-![Nogari2](image/Nogari2.png)  
+![Nogari2](image/Nogari2.webp)  
 **[문제점]** 사용자가 작성중인 글이 간헐적으로 사라지는 문제가 있었습니다.
 
 **[해결]** 사용자의 이용동선을 예상해 문제상황을 구현했고, 창을 벗어났을 때 refetch가 발생하는 것을 발견했습니다.  
@@ -71,7 +71,7 @@ VALUE UP 교육생 공모전 **대상**
 
 ### 3. 라이브러리 분석 및 수정
 
-![Nogari3](image/Nogari3.png)  
+![Nogari3](image/Nogari3.webp)  
 **[문제점]** notion-to-md 라이브러리의 경우 글꼴 색상, tistory 이미지 업로드 등의 기능이 없었습니다.
 
 **[해결]** 노션의 글을 tistory에 그대로 옮기는 것이 목표였기에, **라이브러리를 분석**하고 필요한 부분을 **수정**해 사용할 수 있도록했습니다.
@@ -82,7 +82,7 @@ VALUE UP 교육생 공모전 **대상**
 
 ### 4. Java 서버에서 JavaScript 변환 기능 호출
 
-![Nogari4](image/Nogari4.png)  
+![Nogari4](image/Nogari4.webp)  
 **[문제점]** 서버는 Java로 이루어진반면 변환기능은 JavaScript로 만들어졌있었기 때문에 호출이 어려운 문제가 있었습니다.
 
 **[해결]** Java Scripting API, node.js 서버 호스팅, AWS lambda 세가지 해결책을 찾았고 **AWS lambda**를 채택했습니다. 판단 기준은 다음과 같았습니다.

@@ -9,7 +9,7 @@ function ProjectDetail() {
 
   const [imageList, setImageList] = useState<any>([]);
   const images = useMemo(
-    () => require.context(`@/assets/images/projects/`, true, /\d.(png|jpe?g)$/),
+    () => require.context(`@/assets/images/projects/`, true, /\d.(webp)$/),
     []
   );
 

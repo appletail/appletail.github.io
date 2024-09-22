@@ -1,6 +1,6 @@
 .introduction-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.827), rgba(0, 0, 0, 0.8)),
-    url('/src/assets/images/image1.jpg');
+    url('/src/assets/images/image1.webp');
   background-color: black;
   background-repeat: no-repeat;
   background-position: top center;
