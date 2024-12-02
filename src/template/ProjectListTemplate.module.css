@@ -3,6 +3,9 @@
     row-gap: 1rem;
     column-gap: 1.5rem;
   }
+  .card-container {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 880px) {

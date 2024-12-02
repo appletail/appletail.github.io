@@ -13,7 +13,7 @@ function ProjectCard({ project }: { project: Project }) {
           alt={project.name}
         />
       </Link>
-      <div style={{ textAlign: 'center' }}>{project.name}</div>
+      <div className={styles['card-name']}>{project.name}</div>
     </div>
   );
 }
