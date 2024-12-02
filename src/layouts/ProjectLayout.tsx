@@ -5,9 +5,11 @@ import SideBar from '@/components/SideBar/SideBar';
 function ProjectLayout() {
   return (
     <div>
-      <SideBar />
+      <div className={styles.background} />
+      <div className={styles['side-bar']}>
+        <SideBar />
+      </div>
       <div className={styles['outlet-container']}>
-        <div className={styles.background} />
         <div className={styles.projects}>
           <Outlet />
         </div>

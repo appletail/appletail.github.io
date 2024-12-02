@@ -1,7 +1,15 @@
-.outlet-container {
-  display: flex;
-  height: 100%;
-  padding-left: 18rem;
+@media (max-width: 599px) {
+  .side-bar {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .outlet-container {
+    padding-left: 18rem;
+  }
+  .category-bar {
+    display: none;
+  }
 }
 
 .background {

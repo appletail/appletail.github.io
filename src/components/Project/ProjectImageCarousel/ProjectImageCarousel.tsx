@@ -44,6 +44,7 @@ function ProjectImageCarousel({
             className={styles['image-box']}
           >
             <div
+              className={styles['image-size']}
               onClick={() => setPictureModal(image)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter') setPictureModal(image);

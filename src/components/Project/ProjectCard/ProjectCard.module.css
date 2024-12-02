@@ -1,6 +1,18 @@
+@media (max-width: 849px) {
+  .card-size {
+    width: 10rem;
+    height: 14rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .card-size {
+    width: 15rem;
+    height: 21rem;
+  }
+}
+
 .card {
-  width: 15rem;
-  height: 21rem;
   background-repeat: no-repeat;
   background-position: center;
   object-fit: cover;

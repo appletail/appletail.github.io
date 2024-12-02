@@ -18,10 +18,12 @@ function ProjectList() {
           []
         )
       );
-    } else
+    } else {
+      setTitleName('전체 프로젝트');
       setProject(
         projects.reduce((acc, projectGroup) => [...acc, ...projectGroup], [])
       );
+    }
   }, [searchParams]);
 
   return (

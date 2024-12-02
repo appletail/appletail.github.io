@@ -12,7 +12,7 @@ function ProjectListTemplate({ titleName, titleCnt, collections }: Template) {
   return (
     <div className={styles['project-list']}>
       <ProjectListTitle name={titleName} count={titleCnt} />
-      <div className={styles['card-container']}>
+      <div className={`${styles['card-container']} ${styles['card-gap']}`}>
         {collections.map((collection) => (
           <ProjectCard key={collection.id} project={collection} />
         ))}
