@@ -84,7 +84,7 @@ function ProjectDetailTemplate({
     <div>
       <div className={styles.name}>{projectName}</div>
       <div className={styles.hightlight}>
-        <div className={styles['project-image-carusel']}>
+        <div className={styles['project-image-carousel']}>
           <ProjectImageCarousel
             images={images}
             setModalPicture={setModalPicture}
