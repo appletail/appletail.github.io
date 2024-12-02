@@ -1,6 +1,6 @@
 import styles from '@/template/ProjectListTemplate.module.css';
-import ProjectListTitle from '@/components/ProjectListTitle/ProjectListTitle';
-import ProjectCard from '@/components/ProjectCard/ProjectCard';
+import ProjectListTitle from '@/components/Project/ProjectListTitle/ProjectListTitle';
+import ProjectCard from '@/components/Project/ProjectCard/ProjectCard';
 
 interface Template {
   titleName: string;

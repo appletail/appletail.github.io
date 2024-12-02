@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import styles from '@/components/ProjectImageCarousel/ProjectImageCarousel.module.css';
+import styles from '@/components/Project/ProjectImageCarousel/ProjectImageCarousel.module.css';
 
 function ProjectImageCarousel({
   images,

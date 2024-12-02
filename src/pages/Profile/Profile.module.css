@@ -10,7 +10,6 @@
 }
 
 .profile-background {
-  width: 952px;
   background: radial-gradient(
       farthest-side at top right,
       rgba(109, 38, 44, 0.301),
@@ -36,12 +35,49 @@
   margin: 0 auto;
 }
 
-.header {
-  display: flex;
-  padding: 24px 17px 20px;
-  margin: 0 auto;
+@media (min-width: 700px) {
+  .profile-size {
+    width: 90vw;
+  }
 }
 
+@media (min-width: 1255px) {
+  .profile-size {
+    width: 66vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    display: flex;
+    padding: 24px 17px 20px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 599px) {
+  .profile-mobile {
+    display: flex;
+  }
+  .profile-img {
+    margin-right: 1rem;
+  }
+  .contact-mobile {
+    width: 100%;
+  }
+  .name {
+    margin-top: 0.5rem;
+  }
+}
+@media (min-width: 600px) {
+  .profile-mobile {
+    display: flex;
+    margin-right: 2.25rem;
+  }
+  .contact-mobile {
+    display: none;
+  }
+}
 .profile-img {
   flex-shrink: 0;
   flex-wrap: nowrap;
@@ -49,7 +85,6 @@
   height: 12rem;
   object-fit: cover;
   object-position: center 22%;
-  margin-right: 2.25rem;
 }
 
 .name {
@@ -58,20 +93,35 @@
   margin-bottom: 1rem;
 }
 
+.self-introduction {
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+}
+
 .content {
   display: flex;
 }
 
-.content-left {
-  width: 70%;
-  padding-right: 2rem;
+@media (max-width: 599px) {
+  .content-left {
+    width: 100%;
+  }
+  .contact-desktop {
+    display: none;
+  }
 }
 
-.content-right {
-  width: 30%;
+@media (min-width: 600px) {
+  .content-left {
+    width: 70%;
+    padding-right: 2rem;
+  }
+  .contact-desktop {
+    width: 30%;
+  }
 }
 
-.content-box {
+.contact-box {
   background-color: #1012144d;
   padding: 10px 10px 50px;
   border-radius: 5px;

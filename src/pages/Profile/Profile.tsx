@@ -4,18 +4,18 @@ import profileData from '@/constants/profile';
 import styles from './Profile.module.css';
 import Github from '@/assets/images/icons/Github.svg';
 import Tistory from '@/assets/images/icons/Tistory.svg';
-import ProfileCustomization from '@/components/ProfileCustomization/ProfileCustomization';
-import ProfileEducation from '@/components/ProfileEducation/ProfileEducation';
+import ProfileCustomization from '@/components/Profile/ProfileCustomization/ProfileCustomization';
+import ProfileEducation from '@/components/Profile/ProfileEducation/ProfileEducation';
 import PictureModal from '@/components/PictureModal/PictureModal';
-import ProfileCertificate from '@/components/ProfileCertificate/ProfileCertificate';
-import ProfileAward from '@/components/ProfileAward/ProfileAward';
-import ProfileSkill from '@/components/ProfileSkill/ProfileSkill';
+import ProfileCertificate from '@/components/Profile/ProfileCertificate/ProfileCertificate';
+import ProfileAward from '@/components/Profile/ProfileAward/ProfileAward';
+import ProfileSkill from '@/components/Profile/ProfileSkill/ProfileSkill';
 
 function Profile() {
   const {
     profileImg,
     name,
-    aboutMe,
+    selfIntroduction,
     skills,
     educations,
     certificates,
@@ -55,19 +55,44 @@ function Profile() {
 
   return (
     <div className={styles['about-me']}>
-      <div className={styles['profile-background']}>
+      <div
+        className={`${styles['profile-background']} ${styles['profile-size']}`}
+      >
         <div className={styles.header}>
-          <img
-            src={profileImg}
-            alt="profileImg"
-            className={styles['profile-img']}
-          />
+          <div className={styles['profile-mobile']}>
+            <img
+              src={profileImg}
+              alt="profileImg"
+              className={styles['profile-img']}
+            />
+            <div className={styles['contact-mobile']}>
+              <div>
+                <div className={styles.contact}>CONTACT</div>
+                <div className={styles['contact-content']}>
+                  <div>{contact.phone}</div>
+                  <div>{contact.email}</div>
+                  <a href={contact.github} target="_blank" rel="noreferrer">
+                    <div className={styles['contact-detail']}>
+                      <Github className={styles.icon} />
+                      <span>Github</span>
+                      <LuExternalLink className={styles['external-link']} />
+                    </div>
+                  </a>
+                  <a href={contact.blog} target="_blank" rel="noreferrer">
+                    <div className={styles['contact-detail']}>
+                      <Tistory className={styles.icon} />
+                      <span>Blog</span>
+                      <LuExternalLink className={styles['external-link']} />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div>
             <div className={styles.name}>{name}</div>
-            <div>
-              {aboutMe.map((content) => (
-                <div key={content}>{content}</div>
-              ))}
+            <div className={styles['self-introduction']}>
+              {selfIntroduction}
             </div>
           </div>
         </div>
@@ -90,8 +115,8 @@ function Profile() {
               component={awardComponent}
             />
           </div>
-          <div className={styles['content-right']}>
-            <div className={styles['content-box']}>
+          <div className={styles['contact-desktop']}>
+            <div className={styles['contact-box']}>
               <div className={styles.contact}>CONTACT</div>
               <div className={styles['contact-content']}>
                 <div>{contact.phone}</div>

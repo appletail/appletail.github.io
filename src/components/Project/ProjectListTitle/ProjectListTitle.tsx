@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '@/components/ProjectListTitle/ProjectListTitle.module.css';
-import Line from '../Line/Line';
+import styles from './ProjectListTitle.module.css';
+import Line from '../../Line/Line';
 
 function ProjectListTitle({ name, count }: { name: string; count: number }) {
   return (

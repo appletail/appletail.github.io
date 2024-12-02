@@ -1,20 +1,20 @@
 import React, { useCallback } from 'react';
-import styles from './ProfileEducation.module.css';
+import styles from '../ProfileCustomCard.module.css';
 
-function ProfileEducation({
-  education,
+function ProfileCertificate({
+  certificate,
   setModalPicture,
   setIsModalOn,
 }: {
-  education: {
-    period: string;
+  certificate: {
+    picture: string;
+    date: string;
     content: string;
-    picture?: string;
   };
   setModalPicture: React.Dispatch<React.SetStateAction<string>>;
   setIsModalOn: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const { period, content, picture } = education;
+  const { date, content, picture } = certificate;
   const setPictureModal = useCallback(() => {
     setIsModalOn(true);
     setModalPicture(picture as string);
@@ -27,7 +27,7 @@ function ProfileEducation({
           onKeyDown={(e) => {
             if (e.key === 'Enter') setPictureModal();
           }}
-          aria-label="open education picture modal"
+          aria-label="open certificate picture modal"
           role="button"
           tabIndex={0}
           className={styles.picture}
@@ -37,10 +37,10 @@ function ProfileEducation({
       )}
       <div className={styles.content}>
         <div className={styles.name}>{content}</div>
-        <div>{period}</div>
+        <div>{date}</div>
       </div>
     </div>
   );
 }
 
-export default ProfileEducation;
+export default ProfileCertificate;
