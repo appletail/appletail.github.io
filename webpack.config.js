@@ -62,7 +62,11 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: {
+                localIdentName: isDevMode
+                  ? '[name]__[local]__[hash:base64:5]'
+                  : '[hash:base64]',
+              },
               importLoaders: 1,
             },
           },

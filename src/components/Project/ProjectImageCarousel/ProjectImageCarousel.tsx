@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import styles from '@/components/ProjectImageCarousel/ProjectImageCarousel.module.css';
+import styles from '@/components/Project/ProjectImageCarousel/ProjectImageCarousel.module.css';
 
 function ProjectImageCarousel({
   images,
@@ -44,6 +44,7 @@ function ProjectImageCarousel({
             className={styles['image-box']}
           >
             <div
+              className={styles['image-size']}
               onClick={() => setPictureModal(image)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter') setPictureModal(image);

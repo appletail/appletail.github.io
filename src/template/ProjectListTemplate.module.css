@@ -1,3 +1,17 @@
+@media (max-width: 879px) {
+  .card-gap {
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+  }
+}
+
+@media (min-width: 880px) {
+  .card-gap {
+    row-gap: 2rem;
+    column-gap: 3.5rem;
+  }
+}
+
 .project-list {
   color: #d3d3d3;
 }
@@ -5,6 +19,4 @@
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 2rem;
-  column-gap: 3.5rem;
 }

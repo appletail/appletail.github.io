@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useState } from 'react';
 import remarkGfm from 'remark-gfm';
 import Markdown from 'react-markdown';
 import styles from './ProjectDetailTemplate.module.css';
-import ProjectImageCarousel from '@/components/ProjectImageCarousel/ProjectImageCarousel';
-import ProjectSummary from '@/components/ProjectSummary/ProjectSummary';
+import ProjectImageCarousel from '@/components/Project/ProjectImageCarousel/ProjectImageCarousel';
+import ProjectSummary from '@/components/Project/ProjectSummary/ProjectSummary';
 import Line from '@/components/Line/Line';
 import PictureModal from '@/components/PictureModal/PictureModal';
 import Github from '@/assets/images/icons/Github.svg';
@@ -52,7 +52,11 @@ function ProjectDetailTemplate({
         aria-label="open picture modal"
         tabIndex={0}
       >
-        <img src={imageSrc} alt={props.node.properties.alt} />
+        <img
+          src={imageSrc}
+          style={{ width: '100%' }}
+          alt={props.node.properties.alt}
+        />
       </button>
     );
   };
@@ -77,22 +81,26 @@ function ProjectDetailTemplate({
   );
 
   return (
-    <div className={styles['detail-container']}>
+    <div>
       <div className={styles.name}>{projectName}</div>
       <div className={styles.hightlight}>
-        <ProjectImageCarousel
-          images={images}
-          setModalPicture={setModalPicture}
-          setIsModalOn={setIsModalOn}
-        />
-        <ProjectSummary
-          header_image={projectSummary.header_image}
-          description={projectSummary.description}
-          member={projectSummary.member}
-          period={projectSummary.period}
-          stacks={projectSummary.stacks}
-          platform={projectSummary.platform}
-        />
+        <div className={styles['project-image-carousel']}>
+          <ProjectImageCarousel
+            images={images}
+            setModalPicture={setModalPicture}
+            setIsModalOn={setIsModalOn}
+          />
+        </div>
+        <div className={styles['project-summary']}>
+          <ProjectSummary
+            header_image={projectSummary.header_image}
+            description={projectSummary.description}
+            member={projectSummary.member}
+            period={projectSummary.period}
+            stacks={projectSummary.stacks}
+            platform={projectSummary.platform}
+          />
+        </div>
       </div>
       <Markdown
         components={{ img, h2, a }}

@@ -7,7 +7,11 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <div>
       <Link to={`${pathName.project}/${project.id}`}>
-        <img className={styles.card} src={project.cardImg} alt={project.name} />
+        <img
+          className={`${styles.card} ${styles['card-size']}`}
+          src={project.cardImg}
+          alt={project.name}
+        />
       </Link>
       <div style={{ textAlign: 'center' }}>{project.name}</div>
     </div>

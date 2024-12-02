@@ -17,10 +17,12 @@
 }
 
 .name {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
-.host {
+
+/* award */
+.award-host {
   color: rgb(192, 192, 192);
   font-size: small;
 }
@@ -28,10 +30,11 @@
 .content hr {
   margin-bottom: 0.5rem;
 }
+
 .content span {
   margin-right: 0.5rem;
 }
 
-.detail {
+.award-detail {
   margin-top: 0.5rem;
 }

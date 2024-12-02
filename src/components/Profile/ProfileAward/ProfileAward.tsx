@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import styles from './ProfileAward.module.css';
+import styles from '../ProfileCustomCard.module.css';
 
 function ProfileAward({
   award,
@@ -40,7 +40,7 @@ function ProfileAward({
       )}
       <div className={styles.content}>
         <div className={styles.name}>{name}</div>
-        <div className={styles.host}>{host}</div>
+        <div className={styles['award-host']}>{host}</div>
         <hr />
         <div>
           <span>수상 일자:</span>
@@ -50,7 +50,7 @@ function ProfileAward({
           <span>수상 내역:</span>
           {prize}
         </div>
-        <div className={styles.detail}>{detail}</div>
+        <div className={styles['award-detail']}>{detail}</div>
       </div>
     </div>
   );

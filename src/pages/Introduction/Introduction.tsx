@@ -29,11 +29,10 @@ function Introduction() {
   return (
     <div id="introduction">
       <div className={styles['introduction-container']}>
-        {introduceTexts(2.5, 11, 5, 20).map((text, idx) => (
+        {introduceTexts.map((text, idx) => (
           <div className={styles.sticky} ref={refs[idx]} key={text.id}>
             <div className={styles['text-container']}>
               <div
-                style={text.style}
                 className={
                   observers[idx]
                     ? styles['text-fade-in']

@@ -21,7 +21,68 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+
+  --desktop-fs-top: 2.5;
+  --desktop-top-top: 35;
+  --desktop-fs-bottom: 5;
+  --desktop-top-bottom: 7;
+
+  --mobile-fs-top: 1.5;
+  --mobile-top-top: 40;
+  --mobile-fs-bottom: 3;
+  --mobile-top-bottom: 4;
 }
+
+@media (max-width: 599px) {
+  .introduction-container :nth-child(1) .text-container div {
+    font-size: calc(var(--mobile-fs-top) * 1rem);
+    top: calc(var(--mobile-top-top) * 1vh);
+  }
+  .introduction-container :nth-child(2) .text-container div {
+    font-size: calc(var(--mobile-fs-top) * 1rem);
+    top: calc(var(--mobile-top-top) * 1vh + var(--mobile-fs-top) * 1rem);
+  }
+  .introduction-container :nth-child(3) .text-container div {
+    font-size: calc(var(--mobile-fs-bottom) * 1rem);
+    top: calc(
+      (var(--mobile-top-top) + var(--mobile-top-bottom)) * 1vh +
+        var(--mobile-fs-top) * 1rem
+    );
+  }
+  .introduction-container :nth-child(4) .text-container div {
+    font-size: calc(var(--mobile-fs-bottom) * 1rem);
+    top: calc(
+      (var(--mobile-top-top) + var(--mobile-top-bottom)) * 1vh +
+        var(--mobile-fs-top) * 1rem + var(--mobile-fs-bottom) * 1rem
+    );
+  }
+}
+
+@media (min-width: 600px) {
+  .introduction-container :nth-child(1) .text-container div {
+    font-size: calc(var(--desktop-fs-top) * 1rem);
+    top: calc(var(--desktop-top-top) * 1vh);
+  }
+  .introduction-container :nth-child(2) .text-container div {
+    font-size: calc(var(--desktop-fs-top) * 1rem);
+    top: calc(var(--desktop-top-top) * 1vh + var(--desktop-fs-top) * 1rem);
+  }
+  .introduction-container :nth-child(3) .text-container div {
+    font-size: calc(var(--desktop-fs-bottom) * 1rem);
+    top: calc(
+      (var(--desktop-top-top) + var(--desktop-top-bottom)) * 1vh +
+        var(--desktop-fs-top) * 1rem
+    );
+  }
+  .introduction-container :nth-child(4) .text-container div {
+    font-size: calc(var(--desktop-fs-bottom) * 1rem);
+    top: calc(
+      (var(--desktop-top-top) + var(--desktop-top-bottom)) * 1vh +
+        var(--desktop-fs-top) * 1rem + var(--desktop-fs-bottom) * 1rem
+    );
+  }
+}
+
 .text-fade-in {
   position: fixed;
   opacity: 1;
