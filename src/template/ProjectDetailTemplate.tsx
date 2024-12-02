@@ -81,7 +81,7 @@ function ProjectDetailTemplate({
   );
 
   return (
-    <div className={styles['detail-container']}>
+    <div>
       <div className={styles.name}>{projectName}</div>
       <div className={styles.hightlight}>
         <div className={styles['project-image-carusel']}>
