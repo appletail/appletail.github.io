@@ -1,4 +1,11 @@
-@media (max-width: 849px) {
+@media (min-width: 0px) {
+  .card-size {
+    width: 9rem;
+    height: 12.6rem;
+  }
+}
+
+@media (min-width: 400px) {
   .card-size {
     width: 10rem;
     height: 14rem;
@@ -11,11 +18,16 @@
     height: 21rem;
   }
 }
-
 .card {
   background-repeat: no-repeat;
   background-position: center;
   object-fit: cover;
   box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.85);
   cursor: pointer;
+}
+
+.card-name {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
 }
