@@ -69,7 +69,6 @@ function Profile() {
               <div>
                 <div className={styles.contact}>CONTACT</div>
                 <div className={styles['contact-content']}>
-                  <div>{contact.phone}</div>
                   <div>{contact.email}</div>
                   <a href={contact.github} target="_blank" rel="noreferrer">
                     <div className={styles['contact-detail']}>
@@ -119,7 +118,6 @@ function Profile() {
             <div className={styles['contact-box']}>
               <div className={styles.contact}>CONTACT</div>
               <div className={styles['contact-content']}>
-                <div>{contact.phone}</div>
                 <div>{contact.email}</div>
                 <a href={contact.github} target="_blank" rel="noreferrer">
                   <div className={styles['contact-detail']}>
