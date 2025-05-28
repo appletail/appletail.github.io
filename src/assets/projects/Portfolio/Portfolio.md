@@ -9,9 +9,13 @@
 
 ## 프로젝트 성과
 
-vite나 CRA 없이 webpack으로 직접 번들링 수행  
-scroll animation, carousel, modal을 **라이브러리 없이** 직접 구현  
-**동적 import**를 사용해 이미지를 유동적인 이미지 삽입
+- *vite*나 *CRA* 없이 *webpack + Babel* 환경 직접 설정  
+- *scroll animation*, *carousel*, *modal*을 **라이브러리 없이** 직접 구현  
+- **동적 import**를 사용해 이미지를 유동적인 이미지 삽입  
+- 개발/배포 모드에 따라 CSS 분리  
+- 미디어쿼리를 활용한 **반응형 레이아웃** 구현 및 *.webp* **최적화 이미지 적용**으로 UX 개선  
+- *components*, *pages*, *layouts* 등 역할 단위 폴더 구성으로 구조화된 UI 설계 
+- *CSS Modules*, *PostCSS*, *경로 alias*, *router path 상수화*를 통해 **협업 및 유지보수 효율성 확보**
 
 ## 스택 선정 이유
 
