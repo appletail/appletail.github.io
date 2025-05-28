@@ -9,6 +9,26 @@
 SSAFY 자율 프로젝트 **우수상**  
 VALUE UP 교육생 공모전 **대상**
 
+### Front (웹 프론트엔드 개발)
+#### **React + Vite 기반 UI 아키텍처 설계 및 DX 개선**
+  - *components*, *layouts*, *hooks*, *pages* 구조 기반의 Atomic Design 적용
+  - ESLint, Prettier, TypeScript 도입 및 *lint:fix*, *format:fix* 스크립트 자동화로 코드 품질 및 협업 효율 향상
+
+### ChromeExtension (크롬 확장 기능 개발)
+#### **경량 구조의 확장 프로그램 설계**
+  - Vite + @crxjs/vite-plugin 기반 빠른 번들링 환경 구성
+  - *pages*, *components*, *settings* 디렉터리 분리로 유지보수성 및 기능 확장성 확보
+#### **유저 설정을 반영한 Markdown 변환 흐름 구축**
+  - *TistorySettings*, *popup*, *loading* 등 사용자 흐름에 맞춘 단순하고 직관적인 인터페이스 구현
+
+### NotionParser + mdToHTML (변환 유틸리티 모듈 개발)
+#### **Notion → Markdown → HTML 자동화 파이프라인 구현**
+  - *@notionhq/client*, *notion-to-md*, *markdown-it*, *katex* 등으로 구성된 텍스트 변환 특화 모듈 설계
+  - *mdToHTML* 모듈을 통해 마크다운을 HTML로 재구성, Tistory/GitHub에 게시 가능하도록 처리
+#### **TypeScript 기반 모듈화 및 순수 함수 설계**
+  - *service*, *utils*, *@types* 등 책임 분리 구조로 유지보수성과 테스트 용이성 확보
+
+
 ## 스택 선정 이유
 
 - Styled-component: JS와 CSS 간의 **상수와 함수 공유**
