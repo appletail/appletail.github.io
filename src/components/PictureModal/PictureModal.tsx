@@ -23,7 +23,14 @@ function PictureModal({
       />
       <div className={styles.modal}>
         <div className={styles['modal-label']}>
-          모달을 종료하려면 배경을 클릭하세요.
+          <span>모달을 종료하려면 배경을 클릭하세요.</span>
+          <button
+            type="button"
+            className={styles['modal-close-button']}
+            onClick={setModal}
+            aria-label="close modal">
+              <span className={styles['modal-close-button-text']}>닫기</span>
+          </button>
         </div>
         <img
           src={picture}

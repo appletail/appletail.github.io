@@ -25,8 +25,24 @@
 .modal-label {
   margin-bottom: 5px;
   color: #dcdcdc;
+  
 }
-
+.modal-close-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #dcdcdc;
+  cursor: pointer;
+}
+.modal-close-button:hover {
+  color: #ffffff;
+}
+.modal-close-button-text {
+  font-size: 16px;
+  color: #dcdcdc;
+}
 .modal-picture {
   display: block;
   margin: auto;
