@@ -4,6 +4,7 @@ import SSAFYPrize1 from '@/assets/images/profile/싸피_자율우수상.webp';
 import SSAFYPrize2 from '@/assets/images/profile/싸피_공통우수상.webp';
 import SSAFYPrize3 from '@/assets/images/profile/싸피_성적우수상.webp';
 import SSAFYCert from '@/assets/images/profile/싸피_수료증.webp';
+import EIP from '@/assets/images/profile/정보처리기사.webp';
 import sqld from '@/assets/images/profile/sqld.webp';
 import OPIc from '@/assets/images/profile/OPIc.webp';
 import mktest from '@/assets/images/profile/매경TEST.webp';
@@ -48,6 +49,7 @@ const profile = {
     { period: '2020.02', content: '경북대학교 경영학' },
   ],
   certificates: [
+    { picture: EIP, date: '2025.06', content: '정보처리기사' },
     { picture: sqld, date: '2022.12', content: 'SQL 개발자' },
     { picture: OPIc, date: '2023.09', content: 'OPIc IH' },
     { picture: mktest, date: '2024.07', content: '매경TEST 우수' },
